@@ -1,0 +1,1 @@
+<!-- Comentário- Ficheiro php com o índice do site a criar, de gestão hospitalar -->
