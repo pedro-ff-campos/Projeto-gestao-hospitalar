@@ -1,5 +1,4 @@
-<?php include 'includes/db.php'
-
+<?php
 $host = '127.0.0.1';
 $db_name = 'Projeto_SIBDAS';
 $username = 'root';

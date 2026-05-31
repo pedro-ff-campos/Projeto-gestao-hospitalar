@@ -1,9 +1,13 @@
+USE Projeto_SIBDAS;
+
+
 CREATE TABLE `utilizadores` (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `id` int AUTO_INCREMENT,
   `nome` varchar(100),
   `email` varchar(100) UNIQUE,
   `password` varchar(255),
-  `criado_em` datetime
+  `criado_em` DATETIME,
+  PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `localizacoes` (
@@ -89,6 +93,24 @@ CREATE TABLE `contratos` (
   `id_equipamento` int,
   `id_fornecedor` int
 );
+
+CREATE TABLE conteudos_publicos (
+	`id` int PRIMARY KEY AUTO_INCREMENT,
+	`chave` varchar(100),
+	`valor` text NOT NULL,
+	`descricao` varchar(255),
+	`atualizado_em` DATETIME DEFAULT CURRENT_TIMESTAMP
+	ON UPDATE CURRENT_TIMESTAMP
+);
+
+INSERT INTO conteudos_publicos (chave, valor, descricao) VALUES
+('titulo_hero', 'O inventário hospitalar que o seu hospital merece', 'Título principal da página'),
+('texto_hero', 'A MedInvent desenvolve soluções web para a gestão centralizada de equipamentos médicos.', 'Texto da secção hero'),
+('titulo_sobre', 'Uma empresa focada na saúde digital', 'Título da secção sobre nós'),
+('texto_sobre', 'A MedInvent é uma empresa especializada no desenvolvimento de sistemas de informação para instituições de saúde.', 'Texto da secção sobre nós'),
+('email', 'geral@medinvent.pt', 'Email de contacto'),
+('telefone', '+351 220 000 000', 'Telefone de contacto'),
+('morada', 'Rua Dr. António Bernardino de Almeida, Porto', 'Morada da empresa');
 
 ALTER TABLE `equipamentos` ADD FOREIGN KEY (`id_localizacao`) REFERENCES `localizacoes` (`id`);
 

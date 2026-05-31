@@ -1,5 +1,5 @@
-<?php require_once '../includes/db.php'; ?>
-<?php require_once '../includes/auth.php'; ?>
+
+
 
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
 
   <!-- CSS próprio identificado com número de aluno -->
-  <link rel="stylesheet" href="../assets/css/SEUNUMERO.css"/>
+  <link rel="stylesheet" href="../assets/css/1240773.css"/>
 </head>
 <body>
     <!-- NAVBAR -->

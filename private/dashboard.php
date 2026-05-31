@@ -1,7 +1,6 @@
-<!-- Comentário- Ficheiro php com o índice do site a criar, de gestão hospitalar -->
+<!--Comentário- Ficheiro php com o índice do site a criar, de gestão hospitalar -->
 
-<?php include 'includes/header.php'; ?>
-<?php include 'includes/auth.php'; ?>
+<?php include '../includes/header.php'; ?>
 
 <!-- ==== CONTEÚDO PRINCIPAL ==== -->
 <main>
@@ -94,4 +93,4 @@
     </section>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

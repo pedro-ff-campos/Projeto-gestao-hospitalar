@@ -1,4 +1,4 @@
-<?php include 'includes/header_public.php' ?>
+<?php include '../includes/header_public.php' ?>
 
 <!-- ==== HERO ==== -->
 <section id="hero">
@@ -126,4 +126,4 @@
 </section>
 <!-- ==== CONTACTO ==== -->
 
-<?php include 'includes/footer_public.php' ?>
+<?php include '../includes/footer_public.php' ?>
