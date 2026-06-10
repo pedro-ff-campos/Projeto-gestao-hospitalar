@@ -1,4 +1,3 @@
-</main>
 <!-- Término do conteúdo principal -->
 
 <!-- FOOTER -->

@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -22,3 +18,6 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
+          <a class="navbar-brand" href="#">MedInvent</a>
+        </div>
+    </nav>
