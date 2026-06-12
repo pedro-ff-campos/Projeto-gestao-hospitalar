@@ -8,7 +8,10 @@ if (isset($_SESSION['logado'])) {
     exit;
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = trim($_POST['email']);
+
+    $email_sanitizado = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+
+    $email = strtolower($email_sanitizado);
     $password = trim($_POST['password']);
 
     $stmt = $pdo->prepare('SELECT id, email, password FROM utilizadores WHERE email = ?');
@@ -20,10 +23,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_email'] = $user['email'];
 
+        $log_stmt = $pdo->prepare('INSERT INTO logs (utilizador_id, acao, detalhes, criado_at) VALUES (?, ?, ?, NOW())');
+        $log_stmt->execute([$user['id'], 'LOGIN_SUCESSO', 'O Utilizador iniciou sessão com sucesso.']);
+
         header("Location: dashboard.php");
         exit;
     } else {
         $erro = "E-mail ou palavra-passe incorretos!";
+        $log_stmt = $pdo->prepare('INSERT INTO logs (utilizador_id, acao, detalhes, criado_at) VALUES (?, ?, ?, NOW())');
+        $log_stmt->execute([null, 'LOGIN_FALHADO', "Tentativa de login falhada para o e-mail:' . $email"]);
     }
 }
 ?>
