@@ -304,6 +304,10 @@ footer {
 /*==== Barra de navegação =====*/
 nav {
     position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    box-sizing: border-box; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -313,27 +317,36 @@ nav {
     backdrop-filter: blur(12px);
     z-index: 100;
 }
+
 /* Logo / nome do sistema */
-nav > div:first {
+nav > div:first-child { 
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     color: #ffffff;
-    span {color: #28a745;}
+    
+    span { color: #28a745; }
 }
-/* Links de navegação */
+
+/* Links de navegação geral*/
 nav > ul {
     display: flex;
     gap: 32px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 nav > ul a {
     color: #b3c0b3;
     font-size: 0.88rem;
     font-weight: 500;
+    text-decoration: none;
 }
+
 nav > ul a:hover {
     color: #ffffff;
 }
+
 /* Botão de login */
 nav > div:last-child {
     background-color: #28a745;
@@ -341,12 +354,132 @@ nav > div:last-child {
     border-radius: 6px;
     font-weight: 700;
 }
+
 nav > div:last-child a {
     padding: 10px 22px;
     display: inline-block;
+    color: #1a2b45;
+    text-decoration: none;
 }
 
+
 /*==== HERO SECTION =====*/
+/* Estilo para a secção de destaque (hero) com uso de múltiplos fundos */
 section#hero {
-    
+    position: relative;
+    min-height: 100vh;
+    padding: 140px 48px 80px; 
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: 
+        radial-gradient(circle at center, rgba(255,255,255,0.08) 0%, transparent 60%),
+        linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px) 0 0 / 40px 40px,
+        linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px) 0 0 / 40px 40px,
+        #0f172a;
+}
+
+/* Contentor interno do Hero */
+section#hero > div {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Etiqueta de destaque */
+section#hero > div > span:first-of-type {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    color: #00c4a7;
+    background-color: rgba(0,196,167,0.12);
+    border: 1px solid rgba(0,196,167,0.3);
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* Título principal */
+section#hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.6rem;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-top: 16px;
+    margin-bottom: 12px;
+}
+
+/* Parágrafo de descrição */
+section#hero p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 680px;
+}
+
+/* Bloco que agrupa os botões de ação */
+section#hero > div > div:not(.hero-stats) {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+/* Estilo para o botão primário (Primeiro link) */
+section#hero > div > div:not(.hero-stats) a:first-child {
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    background-color: #0ea5e9;
+    color: #ffffff;
+}
+
+/* Estilo para o botão secundário (Segundo link) */
+section#hero > div > div:not(.hero-stats) a:last-child {
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* ==== STATISTICS SECTION ==== */
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* organização de cada bloco de dados */
+.hero-stats > div {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+/* Números principais */
+.hero-stats strong {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/*Texto descritivo dos números */
+.hero-stats span {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
 }

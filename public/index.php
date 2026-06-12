@@ -16,12 +16,14 @@
             garantias e contratos.
         </p>
 
+        <!-- Botões de ação -->
         <div>
             <a href="#funcionalidades">Ver Funcionalidades</a>
             <a href="login.php">Aceder ao Sistema</a>
         </div>
 
-        <div>
+        <!-- Estatísticas -->
+        <div class="hero-stats">
             <div>
                 <strong>+1 500</strong>
                 <span>Equipamentos geridos</span>
@@ -50,7 +52,7 @@
                 erros, melhorando a rastreabilidade e apoiando a tomada de
                 decisão clínica e administrativa.
             </p>
-
+        <!-- Cards de valores -->
             <div>
                 <article>
                     <h3>Segurança</h3>
@@ -70,6 +72,7 @@
                 </article>
             </div>
         </div>
+        <!-- Lado com capacidades -->
         <div>
             <div>
                 <h4>Inventário Centralizado</h4>
@@ -92,6 +95,53 @@
 </section>
 
 <!-- ==== FUNCIONALIDADES ==== -->
+<section id="funcionalidades">
+    <div>
+      <!-- Cabeçalho da secção -->
+      <span>Funcionalidades</span>
+      <h2>Tudo o que precisa para gerir o seu parque tecnológico</h2>
+      <p>O sistema MedInvent foi desenhado para cobrir todas as necessidades de gestão de inventário hospitalar.</p>
+    </div>
+    <!-- Cards de funcionalidades -->
+    <div>
+        <article>
+            <h3>Gestão de Equipamentos</h3>
+            <p>Registe, consulte e atualize toda a informação dos equipamentos médicos — 
+                marca, modelo, número de série, estado e criticidade clínica.
+            </p>
+        </article>
+        <article>
+            <h3>Módulo de Localizações</h3>
+            <p>Organize os equipamentos por edifício, piso, serviço e sala. 
+                Saiba sempre onde se encontra cada dispositivo médico.
+            </p>
+        </article>
+        <article>
+            <h3>Gestão de Fornecedores</h3>
+            <p>Associe fabricantes, distribuidores e empresas de assistência técnica 
+                a cada equipamento de forma clara e estruturada.
+            </p>
+        </article>
+        <article>
+            <h3>Gestão Documental</h3>
+            <p>Armazene manuais, certificados de calibração, declarações de conformidade 
+                e relatórios técnicos associados a cada equipamento.
+            </p>
+        </article>
+        <article>
+            <h3>Garantias e Contratos</h3>
+            <p>Controle as datas de garantia e os contratos de manutenção. 
+                Receba alertas quando uma garantia estiver prestes a expirar.
+            </p>
+        </article>
+        <article>
+            <h3>Dashboard e Relatórios</h3>
+            <p>Visualize indicadores chave do parque tecnológico — 
+                equipamentos ativos, em manutenção, com garantia expirada e muito mais.
+            </p>
+      </article>
+    </div>
+</section>
 <!-- ==== PORQUÊ NÓS ==== -->
 <section id="porque">
     <div>
@@ -125,5 +175,33 @@
     <a href="login.php">Aceder ao Sistema</a>
 </section>
 <!-- ==== CONTACTO ==== -->
+<section id="contacto">
+    <div>
+        <div>
+            <span>Contacto</span>
+            <h2>Fale connosco</h2>
+            <p>Tem alguma dúvida sobre o sistema ou pretende saber mais sobre os nossos serviços?</p>
+        <div>
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="O seu nome"/>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="o.seu@email.com"/>
+            </div>
+            <div>
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem"/>
+            </div>
+            <div>
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva a sua mensagem aqui..."></textarea>
+            </div>
+            <button type="submit">Enviar Mensagem</button>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php include '../includes/footer_public.php' ?>
