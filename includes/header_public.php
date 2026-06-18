@@ -5,51 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MedInvent — Gestão de Inventário Hospitalar</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons (Pode manter para os ícones funcionarem) -->
+  <link href="https://jsdelivr.net" rel="stylesheet"/>
 
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
-
-  <!-- CSS próprio -->
+  <!-- Seu CSS próprio (Onde está toda a magia) -->
   <link rel="stylesheet" href="../assets/css/1240773.css"/>
 </head>
 <body>
-    <!-- NAVBAR do Front Office -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
+    <!-- NAVBAR Pura e Sem Conflitos -->
+    <nav>
+        <!-- Logo -->
+        <a class="nav-logo" href="index.php">MedInvent</a>
+        
+        <!-- Links de navegação pública -->
+        <ul>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#porque">Porquê Nós</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
 
-            <!-- Logo -->
-            <a class="navbar-brand" href="index.php">MedInvent</a>
-
-            <!-- Botão mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPublic">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- Links de navegação pública -->
-            <div class="collapse navbar-collapse" id="navPublic">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre Nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#funcionalidades">Funcionalidades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#porque">Porquê Nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
-                <!-- Botão de acesso ao sistema -->
-                <a href="../login.php" class="btn btn-primary btn-sm">
-                    <i class="bi bi-box-arrow-in-right"></i> Aceder ao Sistema
-                </a>
-            </div>
+        <!-- Botão de acesso ao sistema -->
+        <div class="nav-btn">
+            <a href="../login.php">
+                <i class="bi bi-box-arrow-in-right"></i> Aceder ao Sistema
+            </a>
         </div>
     </nav>
 
     <!-- Espaço para compensar a navbar fixa -->
-  <div style="height: 70px;"></div>
+    <div style="height: 70px;"></div>
+
