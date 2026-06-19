@@ -1,13 +1,16 @@
 <?php include '../includes/header_public.php' ?>
 
 <!-- ==== HERO ==== -->
-<section id="hero">
-    <div>
-        <!-- Etiqueta / tag -->
-        <span>Gestão de Tecnologia Hospitalar</span>
+<section class="hero">
+    <div class="hero-content">
+        
+        <!-- Etiqueta / tag com a classe certa -->
+        <div class="hero-tag">
+            <i class="bi bi-laptop"></i> Gestão de Tecnologia Hospitalar
+        </div>
  
-        <!-- Título principal -->
-        <h1>O inventário hospitalar que o seu hospital merece</h1>
+        <!-- Título principal com a palavra merece isolada para o verde -->
+        <h1>O inventário hospitalar que o seu hospital <span>merece</span></h1>
  
         <!-- Descrição -->
         <p>
@@ -16,29 +19,32 @@
             garantias e contratos.
         </p>
 
-        <!-- Botões de ação -->
-        <div>
-            <a href="#funcionalidades">Ver Funcionalidades</a>
-            <a href="login.php">Aceder ao Sistema</a>
+        <!-- Botões de ação com as suas classes associadas -->
+        <div class="hero-btns">
+            <a href="login.php" class="btn-primary">
+                <i class="bi bi-box-arrow-in-right"></i> Aceder ao Sistema
+            </a>
+            <a href="#funcionalidades" class="btn-outline">Ver Funcionalidades</a>
         </div>
 
-        <!-- Estatísticas -->
+        <!-- Estatísticas com classes corretas nos itens -->
         <div class="hero-stats">
-            <div>
+            <div class="stat-item">
                 <strong>+1 500</strong>
                 <span>Equipamentos geridos</span>
             </div>
-            <div>
+            <div class="stat-item">
                 <strong>7</strong>
                 <span>Módulos disponíveis</span>
             </div>
-            <div>
+            <div class="stat-item">
                 <strong>100%</strong>
                 <span>Web, sem instalação</span>
             </div>
         </div>
     </div>
 </section>
+
 <!-- ==== SOBRE NÓS ==== -->
 <section id="sobre">
     <div class="sobre-grid">

@@ -13,5 +13,7 @@
     <!-- JavaScript próprio -->
     <script src="../assets/js/1240773.js"></script>
 
+     <script src="https://jsdelivr.net"></script>
+
 </body>
 </html>
