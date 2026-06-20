@@ -12,7 +12,7 @@
   <link href="https://jsdelivr.net" rel="stylesheet"/>
 
   <!-- 3. O seu CSS próprio sempre por baixo para ter a palavra final -->
-  <link rel="stylesheet" href="../assets/css/1240773.css"/>
+  <link rel="stylesheet" href="../assets/css/publico.css"/>
 </head>
 
 <body>
