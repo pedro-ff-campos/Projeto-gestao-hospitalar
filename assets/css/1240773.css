@@ -573,13 +573,32 @@ footer {
 
 
 /* 1. Títulos e Subtítulos */
+
+
+/* ==========================================================================
+   ESTILOS DA PÁGINA DE EQUIPAMENTOS (FILTROS E TABELA) - ATUALIZADO
+   ========================================================================== */
+
+/* 1. Títulos, Subtítulos e Respiração do Painel Principal */
+
+main.pagina-equipamentos {
+    padding: 32px 40px !important;
+    background: #0b1325 !important;
+    min-height: 100vh !important;
+    display: block !important; /* Garante que não herda flex/grid do dashboard */
+    width: 100% !important;
+}
+
+
 main h1 {
     color: #ffffff !important;
     font-size: 28px !important;
     font-weight: 600 !important;
     margin-bottom: 4px !important;
+    
 }
 
+/* NOVO: Formatado para ser um rótulo discreto dentro dos cartões */
 .secao-filtros h2, .secao-listagem h2 {
     font-family: system-ui, -apple-system, sans-serif !important;
     font-size: 13px !important;
@@ -587,8 +606,17 @@ main h1 {
     color: #94a3b8 !important; 
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
-    margin-top: 28px !important;
-    margin-bottom: 16px !important;
+    margin-top: 0 !important;          /* ALTERADO: Remove margem para alinhar no topo do card */
+    margin-bottom: 20px !important;
+}
+
+/* NOVO: Envolve as secções em cartões elegantes para organizar o design */
+.secao-filtros, .secao-listagem {
+    background: #111a2e !important;   /* Azul escuro ligeiramente mais claro */
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin-bottom: 24px !important;
 }
 
 /* 2. Grelha de Filtros (Alinha tudo na horizontal automaticamente) */
@@ -646,27 +674,30 @@ main h1 {
     opacity: 0.9 !important;
 }
 
+/* ALTERADO: Cria uma linha divisória discreta acima dos botões de ação */
 .filtros-acoes {
     display: flex !important;
     align-items: center !important;
     gap: 16px !important;
-    margin-top: 12px !important;
+    margin-top: 20px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding-top: 16px !important;
 }
 
 .filtros-acoes button {
     background: #00bcff !important; 
     color: #ffffff !important;
     border: none !important;
-    padding: 10px 24px !important;
+    padding: 10px 28px !important;    /* ALTERADO: Mais largura para o botão respirar */
     border-radius: 8px !important;
     font-weight: 600 !important;
     font-size: 14px !important;
     cursor: pointer !important;
-    transition: opacity 0.2s !important;
+    transition: background 0.2s !important;
 }
 
 .filtros-acoes button:hover {
-    opacity: 0.9 !important;
+    background: #0099dd !important;    /* ALTERADO: Feedback visual escurecido no hover */
 }
 
 .btn-limpar {
@@ -683,22 +714,19 @@ main h1 {
 .tabela-med {
     width: 100% !important;
     border-collapse: collapse !important;
-    margin-top: 12px !important;
-    background: #111a2e !important; 
-    border-radius: 12px !important;
-    overflow: hidden !important;
-    border: 1px solid rgba(255, 255, 255, 0.03) !important;
+    margin-top: 8px !important;
+    background: transparent !important; /* ALTERADO: O fundo agora herda do cartão principal */
 }
 
 .tabela-med th {
     background: rgba(255, 255, 255, 0.02) !important;
-    color: #94a3b8 !important;
-    font-size: 11px !important;
+    color: #94a3b8 !important;         /* ALTERADO: Tom cinzento mais claro e nítido */
+    font-size: 12px !important;         /* ALTERADO: Subiu para 12px para melhor leitura */
     text-transform: uppercase !important;
     font-weight: 600 !important;
     letter-spacing: 0.5px !important;
     padding: 14px 16px !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important; /* ALTERADO: Linha mais forte */
 }
 
 .tabela-med td {
@@ -711,10 +739,11 @@ main h1 {
 /* Mensagem de tabela sem dados */
 .tabela-vazia {
     text-align: center !important;
-    color: #64748b !important;
-    padding: 48px !important;
-    font-style: italic !important;
+    color: #94a3b8 !important;         /* ALTERADO: Subiu o contraste para melhor legibilidade */
+    padding: 60px !important;          /* ALTERADO: Mais espaço vertical para isolar o aviso */
+    font-style: normal !important;     /* ALTERADO: Texto direito para aspeto mais limpo */
     font-size: 15px !important;
+    font-weight: 500 !important;
 }
 
 /* 5. Paginação Básica */
@@ -739,3 +768,228 @@ main h1 {
     cursor: default !important;
 }
 
+/* Alinhamento profissional do cabeçalho */
+.page-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+}
+
+/* Garante que o H1 não ganha margens estranhas que desalitem o botão */
+main h1 {
+    margin: 0 !important;
+}
+
+/* ==========================================================================
+   BADGES DE ESTADO E CRITICIDADE (IDÊNTICOS AO DASHBOARD)
+   ========================================================================== */
+
+/* Configuração geral dos crachás (badges) */
+.badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-transform: capitalize !important;
+}
+
+/* Cores dos Estados */
+.badge-ativo {
+    background: rgba(0, 204, 153, 0.1) !important;
+    color: #00cc99 !important;
+}
+/* Adiciona uma bolinha antes do texto estilo o teu dashboard */
+.badge-ativo::before {
+    content: "" !important;
+    width: 6px !important;
+    height: 6px !important;
+    background: #00cc99 !important;
+    border-radius: 50% !important;
+}
+
+.badge-manutencao {
+    background: rgba(255, 153, 0, 0.1) !important;
+    color: #ff9900 !important;
+}
+.badge-manutencao::before {
+    content: "" !important;
+    width: 6px !important;
+    height: 6px !important;
+    background: #ff9900 !important;
+    border-radius: 50% !important;
+}
+
+.badge-inativo, .badge-abatido {
+    background: rgba(239, 68, 68, 0.1) !important;
+    color: #ef4444 !important;
+}
+
+/* Cores de Criticidade */
+.badge-crit {
+    display: inline-block !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+}
+
+.badge-crit-alta, .badge-crit-vida {
+    background: rgba(239, 68, 68, 0.15) !important;
+    color: #ef4444 !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+}
+
+.badge-crit-media {
+    background: rgba(245, 158, 11, 0.15) !important;
+    color: #f59e0b !important;
+    border: 1px solid rgba(245, 158, 11, 0.3) !important;
+}
+
+.badge-crit-baixa {
+    background: rgba(59, 130, 246, 0.15) !important;
+    color: #3b82f6 !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Formatação dos botões de ação na tabela */
+.acoes-tabela {
+    display: flex !important;
+    gap: 12px !important;
+    justify-content: center !important;
+}
+
+.acoes-tabela a {
+    font-size: 16px !important;
+    transition: transform 0.2s !important;
+}
+
+.acoes-tabela a:hover {
+    transform: scale(1.15) !important;
+}
+
+/* ==========================================================================
+   6. ESTILOS UNIFICADOS (FORNECEDORES, LOCALIZAÇÕES E DOCUMENTAÇÃO)
+   ========================================================================== */
+
+/* ── Fundo azul-marinho dos Blocos (Cards) ── */
+main.pagina-fornecedores .card,
+main.pagina-localizacoes .card,
+main.pagina-documentacao .card,
+main.pagina-garantias .card,
+main.pagina-contratos .card {
+  border-radius: 12px !important;
+  background-color: #151c2c !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ── Títulos secundários (h2) ── */
+main.pagina-fornecedores h2,
+main.pagina-localizacoes h2,
+main.pagina-documentacao h2,
+main.pagina-garantias h2,
+main.pagina-contratos h2 {
+  font-size: 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #a0aec0 !important;
+}
+
+/* ── Campos de texto e caixas de seleção escuros ── */
+main.pagina-fornecedores .form-control, 
+main.pagina-fornecedores .form-select,
+main.pagina-localizacoes .form-control, 
+main.pagina-localizacoes .form-select,
+main.pagina-documentacao .form-control, 
+main.pagina-documentacao .form-select,
+main.pagina-garantias .form-control, 
+main.pagina-garantias .form-select,
+main.pagina-contratos .form-control, 
+main.pagina-contratos .form-select {
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  font-size: 0.95rem;
+  background-color: #0b111e !important;
+  color: #ffffff !important;
+  border: 1px solid #242f47 !important;
+  transition: all 0.2s ease;
+}
+
+/* ── Destaque visual luminoso ao clicar nos campos ── */
+main.pagina-fornecedores .form-control:focus, 
+main.pagina-fornecedores .form-select:focus,
+main.pagina-localizacoes .form-control:focus, 
+main.pagina-localizacoes .form-select:focus,
+main.pagina-documentacao .form-control:focus, 
+main.pagina-documentacao .form-select:focus,
+main.pagina-garantias .form-control:focus, 
+main.pagina-garantias .form-select:focus,
+main.pagina-contratos .form-control:focus, 
+main.pagina-contratos .form-select:focus {
+  border-color: #00bfa5 !important;
+  box-shadow: 0 0 0 3px rgba(0, 191, 165, 0.2) !important;
+}
+
+/* ── Cabeçalho de todas as Tabelas ── */
+main.pagina-fornecedores .table thead th,
+main.pagina-localizacoes .table thead th,
+main.pagina-documentacao .table thead th,
+main.pagina-garantias .table thead th,
+main.pagina-contratos .table thead th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  color: #a0aec0 !important;
+  border-bottom: 2px solid #363f54 !important;
+}
+
+/* ── Linhas de todas as Tabelas ── */
+main.pagina-fornecedores .table tbody td,
+main.pagina-localizacoes .table tbody td,
+main.pagina-documentacao .table tbody td,
+main.pagina-garantias .table tbody td,
+main.pagina-contratos .table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #2d3748 !important;
+}
+
+/* ── Efeito luminoso ao passar o rato nas tabelas ── */
+main.pagina-fornecedores .table-hover tbody tr:hover,
+main.pagina-localizacoes .table-hover tbody tr:hover,
+main.pagina-documentacao .table-hover tbody tr:hover,
+main.pagina-garantias .table-hover tbody tr:hover,
+main.pagina-contratos .table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* ── Estados Vazios e Botões de Alerta (Localizações e Documentação) ── */
+main.pagina-localizacoes .text-center.text-muted p,
+main.pagina-documentacao .text-center.text-muted p,
+main.pagina-garantias .text-center.text-muted p,
+main.pagina-contratos .text-center.text-muted p {
+  color: #a0aec0 !important;
+}
+
+main.pagina-localizacoes .btn-outline-primary,
+main.pagina-documentacao .btn-outline-primary,
+main.pagina-garantias .btn-outline-primary,
+main.pagina-contratos .btn-outline-primary {
+  color: #00bfa5 !important;
+  border-color: #00bfa5 !important;
+}
+
+main.pagina-localizacoes .btn-outline-primary:hover,
+main.pagina-documentacao .btn-outline-primary:hover,
+main.pagina-garantias .btn-outline-primary:hover,
+main.pagina-contratos .btn-outline-primary:hover {
+  background-color: #00bfa5 !important;
+  color: #151c2c !important;
+}
