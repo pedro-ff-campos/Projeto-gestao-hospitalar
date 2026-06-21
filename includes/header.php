@@ -11,39 +11,43 @@
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
 
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+
   <!-- CSS próprio identificado com número de aluno -->
-  <link rel="stylesheet" href="../assets/css/1240773.css"/>
+  <link rel="stylesheet" href="<?php echo $prefixo ?? '../'; ?>assets/css/1240773.css"/>
 </head>
 <body>
 
   <!-- ── BARRA LATERAL VERTICAL (SIDEBAR) ── -->
   <aside class="sidebar">
     <div class="sidebar-logo">
-      <h1>MedInvent</h1>
+      <h1>Med<span>Invent</span></h1>
       <span>Hospital de S. João</span>
     </div>
-    
-    <!-- SUBSTITUÍDO: Mudámos de <nav> para <div class="sidebar-links-wrapper"> para bloquear o Bootstrap -->
+
     <div class="sidebar-links-wrapper">
       <div class="nav-section">Principal</div>
-      <a href="dashboard.php" class="active">
+       <a href="/private/dashboard.php">
         <i class="bi bi-pie-chart-fill"></i> Dashboard
       </a>
-      <a href="equipamentos.php">
+      <a href="/private/equipamentos/index.php">
         <i class="bi bi-wrench-adjustable"></i> Equipamentos
       </a>
       
       <div class="nav-section">Gestão</div>
-      <a href="fornecedores.php">
+      <a href="/private/fornecedores/index.php">
         <i class="bi bi-truck"></i> Fornecedores
       </a>
-      <a href="documentacao.php">
+      <a href="/private/documentacao/index.php">
         <i class="bi bi-file-earmark-text"></i> Documentação
       </a>
-      <a href="garantias.php">
+      <a href="/private/garantias/index.php">
         <i class="bi bi-shield-check"></i> Garantias
       </a>
-      <a href="contratos.php">
+      <a href="/private/contratos/index.php">
         <i class="bi bi-file-earmark-lock"></i> Contratos
       </a>
       
