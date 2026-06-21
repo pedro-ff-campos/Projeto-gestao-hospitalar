@@ -91,7 +91,7 @@
 
         <!-- Coluna da Direita: Painel Escuro (Substitui imagem) -->
         <div class="sobre-imagem">
-            
+            <i class="fa-solid fa-boxes-stacked"></i> 
             <div class="sobre-imagem-item">
                 <i class="bi bi-check-circle-fill"></i>
                 <div>
