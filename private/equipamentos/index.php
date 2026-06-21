@@ -70,7 +70,7 @@ $localizacoes = $stmt_loc->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
-<main>
+<main class="pagina-equipamentos">
  
     <!-- ── Cabeçalho da página ── -->
     <div class="page-header">

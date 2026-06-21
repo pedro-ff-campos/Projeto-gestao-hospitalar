@@ -36,7 +36,9 @@
       <a href="/private/equipamentos/index.php">
         <i class="bi bi-wrench-adjustable"></i> Equipamentos
       </a>
-      
+      <a href="/private/localizacoes/index.php">
+        <i class="bi bi-geo-alt-fill"></i> Localizações
+      </a>
       <div class="nav-section">Gestão</div>
       <a href="/private/fornecedores/index.php">
         <i class="bi bi-truck"></i> Fornecedores
@@ -62,7 +64,6 @@
         <i class="bi bi-gear"></i> Configurações
       </a>
     </div>
-  </div>
 
     <!-- Rodapé do Utilizador no Fundo da Sidebar -->
     <div class="sidebar-footer">
