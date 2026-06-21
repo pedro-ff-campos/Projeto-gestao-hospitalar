@@ -1,0 +1,1150 @@
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 70px;
+  background: rgba(10, 31, 60, 0.95); 
+  backdrop-filter: blur(12px); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #ffffff; 
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Força o "Invent" a ficar no verde turquesa da imagem */
+.nav-logo span { 
+    color: #00cc99; 
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #a0aec0; 
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover { 
+    color: #ffffff; /* Fica branco ao passar o rato */
+}
+
+/* O Botão Verde Turquesa da Imagem */
+.btn-aceder {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #00cc99; 
+    color: #ffffff; 
+    border-radius: 6px;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-aceder:hover { 
+    background-color: #00b386; 
+    filter: brightness(1.05);
+}
+
+
+
+
+/*==== HERO SECTION =====*/
+.hero {
+  min-height: 100vh;
+  background: #05192d; 
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 48px 80px;
+  box-sizing: border-box;
+}
+ 
+/* Grid de fundo decorativo */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0; 
+  background-image:
+    linear-gradient(rgba(26, 111, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 111, 255, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+ 
+/* Círculo decorativo (Brilho radial ao fundo) */
+.hero::after {
+  content: '';
+  position: absolute;
+  right: -200px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 204, 153, 0.12) 0%, transparent 70%); 
+}
+ 
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+ 
+/* A Etiqueta "Gestão de Tecnologia Hospitalar" */
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 204, 153, 0.12); 
+  border: 1px solid rgba(0, 204, 153, 0.3);
+  color: #00cc99; 
+  font-size: 12px; 
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+}
+ 
+/* Título Principal */
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 58px; 
+  line-height: 1.15;
+  color: #ffffff; 
+  margin-bottom: 24px;
+}
+
+/* Palavra em Destaque no Título */
+.hero h1 span { 
+  color: #00cc99; 
+}
+ 
+/* Parágrafo do Hero */
+.hero p {
+  font-size: 19px; /* De 1.1rem para 16px */
+  line-height: 1.6;
+  color: #b3c0b3; 
+  margin-bottom: 40px;
+  max-width: 620px;
+}
+ 
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+ 
+/* Botão Principal (Aceder ao Sistema) */
+.hero .btn-primary {
+  padding: 16px 32px;
+  background: #00bcff;
+  color: #ffffff; 
+  border-radius: 8px;
+  font-size: 17px; 
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1;
+  height: auto;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.hero .btn-primary:hover { 
+  background-color: #009cd3; 
+  transform: translateY(-2px); 
+}
+ 
+/* Botão Secundário (Saber Mais) */
+.hero .btn-outline {
+  padding: 16px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff; /* Branco direto */
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hero .btn-outline:hover { 
+  background: rgba(255, 255, 255, 0.08); 
+  transform: translateY(-2px); 
+}
+ 
+/* Bloco de Estatísticas (Stats) */
+.hero-stats {
+    display: flex !important;
+    flex-direction: row !important; 
+    justify-content: flex-start;
+    gap: 60px; 
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+/* Garante que o número e o texto secundário ficam bem organizados */
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-item strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.stat-item span {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #a0aec0; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap; 
+}
+
+/*==== UTILITÁRIOS COMUNS DAS SECÇÕES ====*/
+
+/* CONFIGURAÇÕES GERAIS DAS SECÇÕES */
+section {
+  padding: 100px 48px;
+  box-sizing: border-box; 
+}
+ 
+/* Etiqueta pequena de topo de cada secção */
+.section-tag {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 12px; 
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00bcff; 
+  margin-bottom: 12px;
+}
+ 
+/* Título principal de cada secção */
+.section-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px; 
+  color: #0b1b3d; 
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+ 
+/* Subtítulo ou texto descritivo geral */
+.section-sub {
+  font-family: sans-serif;
+  font-size: 16px; 
+  color: #555555; 
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+
+/*==== SOBRE NÓS ====*/
+
+/* ==========================================================================
+   SECÇÃO SOBRE NÓS: MELHORIA DE ESCALA, ESPAÇO E LEITURA
+   ========================================================================== */
+
+#sobre {
+    background: #f8f9fa; 
+    padding: 120px 48px !important;   /* Aumentado o espaço vertical para dar mais impacto */
+}
+ 
+/* Grelha de 2 colunas: texto à esq., painel à dir. */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr; 
+    gap: 60px;                         
+    align-items: stretch;              
+    max-width: 1200px;                 
+    margin: 0 auto;
+}
+
+/* --- ESTILOS DOS TEXTOS PRINCIPAIS DA ESQUERDA --- */
+#sobre h2 {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 42px !important;        /* Título principal muito mais imponente */
+    line-height: 1.25 !important;
+    color: #0b1b3d !important;
+    margin-bottom: 24px !important;
+    font-weight: 800 !important;
+}
+
+#sobre > p, .sobre-grid > div:first-child > p {
+    font-size: 17.5px !important;      /* Aumentado o parágrafo longo para uma leitura fluida */
+    line-height: 1.7 !important;       /* Mais ar entre as linhas de texto */
+    color: #4a5568 !important;         /* Um tom cinzento escuro mais suave e elegante */
+    margin-bottom: 40px !important;
+}
+
+/* Grelha interna 2×2 para os cards de valores */
+.sobre-valores {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;                         /* Aumentado o espaço de separação entre os cartões */
+    margin-top: 32px !important;
+    align-items: stretch;              /* Garante que os cartões têm a mesma altura, mesmo com textos de tamanhos diferentes */
+    align-content: start !important;              /* Alinha os cartões ao topo para uma aparência mais organizada */
+}
+ 
+/* Card individual de valor (Segurança, Eficiência…) */
+.valor-card {
+    background: #ffffff; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 12px;
+    padding: 28px 24px !important;          
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03); 
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;               
+    height: auto !important;            
+}
+ 
+.valor-card i {
+    font-size: 24px;                   
+    color: #00bcff; 
+    margin-bottom: 12px;
+}
+
+.valor-card h4 {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 20px !important;                   
+    font-weight: 800 !important;
+    color: #0b1b3d !important; 
+    margin-bottom: 12px !important;
+    letter-spacing: -0.2px;
+}
+ 
+.valor-card p {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 15.5px !important;                 
+    color: #475868 !important;                    
+    line-height: 1.6 !important;
+}
+ 
+/* --- PAINEL DIREITO ESCURO (INVENTÁRIO CENTRALIZADO, ETC.) --- */
+.sobre-imagem {
+    background: #0b1b3d; 
+    border-radius: 16px;
+    padding: 32px;                
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+    align-self: start;
+}
+
+/* Item dentro do painel: ícone + texto em linha */
+.sobre-imagem-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 24px;                
+    background: rgba(255, 255, 255, 0.03); 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+/* Pequeno bónus: Acende subtilmente ao passar o rato */
+.sobre-imagem-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(0, 188, 255, 0.2);
+}
+ 
+/* O ÍCONE VERDE À ESQUERDA ATUALIZADO */
+.sobre-imagem-item i {
+    font-size: 20px !important;         
+    color: #00cc99 !important;          
+    width: 44px !important;             
+    height: 44px !important;
+    background: rgba(0, 208, 153, 0.1) !important; 
+    border-radius: 50% !important;     
+    display: flex !important;
+    align-items: center !important;     
+    justify-content: center !important; 
+    flex-shrink: 0 !important;          
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; 
+}
+
+/* ANIMAÇÃO: QUANDO PASSA O RATO NO BLOCO (HOVER) */
+.sobre-imagem-item:hover i {
+    background: #00cc99 !important;     
+    color: #0b1b3d !important;          
+    transform: translateY(-2px) scale(1.05) !important; 
+    box-shadow: 0 0 16px rgba(0, 208, 153, 0.4) !important; 
+}
+
+
+.sobre-imagem-item strong {
+    font-family: system-ui, -apple-system, sans-serif;
+    display: block;
+    font-size: 17px;
+    font-weight: 700;                   
+    color: #ffffff;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+ 
+.sobre-imagem-item span {
+    font-family: system-ui, -apple-system, sans-serif;
+    display: block;
+    font-size: 14.5px;                 
+    color: #94a3b8;                    
+    line-height: 1.5;
+}
+
+
+
+/*==== FUNCIONALIDADES ====*/
+
+#funcionalidades {
+    background: #ffffff; 
+}
+ 
+/* Cabeçalho centrado acima da grelha */
+.func-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.func-header .section-tag {
+    display: block; 
+    text-align: center;
+    margin: 0 auto 12px; 
+}
+ 
+.func-header .section-sub {
+    margin: 15px auto 0;
+}
+ 
+/* Grelha de 3 colunas para os cards */
+.func-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+ 
+/* Card de funcionalidade */
+.func-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0; 
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+ 
+.func-card:hover {
+    border-color: #00bcff; 
+    transform: translateY(-6px); 
+    box-shadow: 0 12px 30px rgba(0, 188, 255, 0.12);
+}
+ 
+/* Caixa quadrada para o ícone */
+.func-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    background: #e8f7ff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #00bcff; 
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.func-card:hover .func-icon {
+    background: #00bcff; 
+    color: #ffffff; 
+    transform: scale(1.08); 
+}
+ 
+.func-card h3 {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0b1b3d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.func-card h3:hover {
+    color: #00bcff; 
+}
+ 
+.func-card p {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*==== PORQUÊ NÓS ====*/
+
+#porque {
+  background: #05192d; 
+  position: relative;
+  overflow: hidden;
+  padding: 100px 48px; 
+}
+
+/* Grid decorativo de linhas azuis ao fundo */
+#porque::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0; 
+  background-image:
+    linear-gradient(rgba(26, 111, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 111, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+ 
+/* Contentor interno acima do fundo */
+.porque-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+ 
+/* Cabeçalho centrado */
+.porque-header {
+  text-align: center !important;
+  max-width: 800px !important; 
+  margin: 0 auto 60px !important; 
+}
+
+.porque-header .section-tag {
+  display: block !important;
+  text-align: center !important;
+  margin: 0 auto 12px !important;
+  color: #00cc99 !important; 
+
+}
+
+.porque-header .section-titulo { 
+  text-align: center !important;
+  color: #ffffff !important;
+  margin: 10px auto 20px !important; 
+  display: block !important;
+  width: 100% !important;
+}
+
+.porque-header .section-sub { 
+    font-size: 17px !important;
+    color: #a0aec0 !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    margin: 15px auto 0 !important; 
+    display: block !important;
+    max-width: 680px !important;
+}
+
+.porque-card span {
+  color: #ffffff !important; 
+  font-size: 18px !important; 
+  font-weight: 800 !important; 
+  text-transform: uppercase !important;
+  display: block !important;
+  margin-bottom: 8px !important;
+  text-align: center !important;
+  letter-spacing: 0.8px !important; 
+}
+ 
+/* Grelha explícita de 4 colunas */
+.porque-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+ 
+/* Card translúcido futurista com transição suave */
+.porque-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: all 0.3s ease; 
+}
+
+/* HOVER PREMIUM: O cartão brilha discretamente e destaca-se no fundo escuro */
+.porque-card:hover { 
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 204, 153, 0.3); 
+  transform: translateY(-5px); 
+}
+ 
+/* Ícones dos cards */
+.porque-card i {
+  font-size: 32px; /* De 2rem para 32px */
+  color: #00cc99; 
+  display: block;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+/* O ícone ganha um leve impulso ao passar o rato */
+.porque-card:hover i {
+  transform: translateY(-2px) scale(1.05);
+}
+ 
+/* Título interno do card */
+.porque-card h2
+.porque-card h3,
+.porque-card h4 {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #00cc99 !important; 
+  margin-bottom: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* O título acende na cor de destaque */
+.porque-card:hover h4 {
+  color: #00cc99;
+}
+
+/* --- FORÇA TODOS OS TEXTOS SECUNDÁRIOS DO CARTÃO A FICAREM VERDES --- */
+.porque-card *:nth-child(2) {
+  color: #00cc99 !important;     /* Força a cor verde brilhante oficial */
+  font-size: 15px !important;    /* Aumenta o tamanho para ficar nítido */
+  font-weight: 700 !important;    /* Dá o peso correto à letra */
+  display: block !important;
+  margin-bottom: 12px !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+}
+
+ 
+/* Parágrafo explicativo */
+.porque-card p {
+  font-family: sans-serif;
+  font-size: 14px; 
+  color: #cbd5e1 !important; 
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* O texto fica ligeiramente mais claro para simular iluminação */
+.porque-card:hover p {
+  color: #f1f5f9 !important;
+}
+
+
+/*==== CTA ====*/
+
+#cta {
+  background: linear-gradient(135deg, #1a4f95, #0a1f3c) !important; 
+  padding: 80px 48px;
+  text-align: center;
+  border-top: none !important; 
+  border: none !important; 
+}
+
+.cta-section {
+  padding: 100px 48px !important;   
+  text-align: center !important;     
+  background: #05192d !important;
+}
+
+.cta-section p {
+  font-size: 19px !important;        /* Aumentado de 17px para 19px para saltar à vista */
+  color: #cbd5e1 !important;         /* Mantém o cinzento claro com excelente contraste */
+  line-height: 1.6 !important;
+  max-width: 680px !important;       /* Alargado ligeiramente para o texto respirar melhor */
+  margin: 0 auto 40px !important; 
+}
+ 
+#cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+ 
+#cta p {
+  font-size: 17px;
+  color: #cdd5e1; 
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+ 
+/* O BOTÃO CORRIGIDO: Agora com o nome exato do seu HTML (.btn-cta) */
+.btn-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px 40px !important;       /* Botão grande e imponente */
+  background-color: #00bcff !important; /* Força o azul brilhante de volta */
+  color: #ffffff !important;            /* Força o texto a ficar BRANCO */
+  font-size: 18px !important;        
+  font-weight: bold !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;    /* Remove o sublinhado de link */
+  height: auto !important;
+  margin-top: 20px !important;         /* Dá espaço em relação ao texto de cima */
+  transition: background-color 0.2s, transform 0.2s !important;
+}
+
+/* Efeito de Hover no Botão */
+#cta-section .btn-primary:hover {
+  background-color: #009cd3 !important; /* Escurece ligeiramente */
+  transform: translateY(-2px) !important; /* Pequeno efeito de elevação */
+}
+
+/*==== CONTACTOS ====*/
+
+#contacto {
+  background: #f8f9fa; /* Fundo cinza claro sólido padrão */
+  padding: 100px 48px;
+  box-sizing: border-box;
+}
+ 
+/* Grelha que divide o ecrã a meio para computadores */
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+ 
+/* Bloco das informações da esquerda */
+.contacto-info { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 24px; 
+  margin-top: 32px; 
+}
+ 
+/* Item de informação individual (Ícone + Texto) */
+.contacto-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+/* Ícones das informações */
+.contacto-item i {
+  font-size: 19px; 
+  color: #00bcff; 
+  margin-top: 2px;
+  transition: transform 0.3s ease;
+}
+
+/* Micro-interação: o ícone mexe-se ligeiramente se o utilizador passar lá o rato */
+.contacto-item:hover i {
+  transform: scale(1.1) translateX(2px);
+}
+ 
+.contacto-item strong { 
+  display: block; 
+  font-family: sans-serif;
+  font-size: 16px; 
+  font-weight: 700;
+  margin-bottom: 2px; 
+  color: #0b1b3d; 
+}
+
+.contacto-item span { 
+  font-family: sans-serif;
+  color: #555555; 
+  font-size: 15px !important; 
+}
+
+
+/* Garante que o bloco da esquerda (textos) se organiza na vertical */
+.contacto-info-bloco {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-info-bloco .section-tag {
+  color: #00bcff !important; 
+  font-size: 14px !important; 
+  letter-spacing: 2px !important; 
+  font-weight: 800 !important;
+}
+
+.contacto-info-bloco .section-titulo {
+  font-size: 46px !important; 
+  font-weight: bold !important;
+  color: #0b1b3d !important;
+  margin-top: 8px !important;
+  margin-bottom: 20px !important;
+}
+
+.contacto-info-bloco .section-sub {
+  font-size: 17px !important; 
+  color: #555555 !important;
+  line-height: 1.6 !important;
+}
+
+/* OBRIGATÓRIO: Força o formulário da direita a empilhar os campos na vertical */
+.contacto-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px; 
+  width: 100%;
+}
+
+
+ 
+/* Espaçamento vertical entre os campos do formulário */
+.form-group { 
+  margin-bottom: 20px; 
+}
+ 
+/* Títulos das caixas de texto */
+.form-group label {
+  display: block;
+  font-family: sans-serif;
+  font-size: 14px; 
+  font-weight: bold;
+  color: #0b1b3d; 
+  margin-bottom: 6px;
+}
+ 
+/* CAIXAS DE TEXTO MODERNAS (Inputs e Textarea) */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0; 
+  border-radius: 8px;
+  font-size: 15px; 
+  font-family: sans-serif; 
+  color: #333333;
+  background: #ffffff; 
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+/* EFEITO DE FOCO PREMIUM: A caixa ganha uma borda azul claro e uma sombra invisível brilhante */
+.form-group input:focus,
+.form-group textarea:focus { 
+  border-color: #00bcff; 
+  box-shadow: 0 0 0 3px rgba(0, 188, 255, 0.15); 
+  background: #ffffff;
+}
+
+.form-group textarea { 
+  height: 120px; 
+  resize: vertical; 
+}
+ 
+/* BOTÃO DE SUBMISSÃO APELATIVO (Azul de Destaque) */
+.btn-enviar {
+  width: 100%;
+  padding: 16px;
+  background: #00bcff; 
+  color: #ffffff; 
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px; 
+  font-weight: bold;
+  font-family: sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 188, 255, 0.1);
+  transition: all 0.25s ease;
+}
+ 
+/* HOVER PREMIUM: O botão inverte para o azul-escuro corporativo de forma suave */
+.btn-enviar:hover { 
+  background: #0b1b3d; 
+  box-shadow: 0 6px 12px rgba(11, 27, 61, 0.2);
+  transform: translateY(-1px); 
+}
+
+
+/* Garante que o bloco da esquerda (textos) se organiza na vertical */
+.contacto-info-bloco {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-info-bloco .section-tag {
+  color: #00bcff !important; 
+  font-size: 14px !important; 
+  letter-spacing: 2px !important; 
+  font-weight: 800 !important;
+}
+
+.contacto-info-bloco .section-titulo {
+  font-size: 46px !important; 
+  font-weight: bold !important;
+  color: #0b1b3d !important;
+  margin-top: 8px !important;
+  margin-bottom: 20px !important;
+}
+
+.contacto-info-bloco .section-sub {
+  font-size: 17px !important; 
+  color: #555555 !important;
+  line-height: 1.6 !important;
+}
+
+/* OBRIGATÓRIO: Força o formulário da direita a empilhar os campos na vertical */
+.contacto-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px; 
+  width: 100%;
+}
+
+.contacto-item span {
+  font-size: 15px !important; 
+}
+
+/*==== FOOTER ====*/
+
+footer {
+  background: #0a1f3c; 
+  border-top: 1px solid rgba(255, 255, 255, 0.06); 
+  padding: 28px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+ 
+footer p {
+  font-size: 13px; 
+  color: #a0a0a0; 
+  margin: 0; 
+}
+ 
+/* Logótipo no footer */
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; 
+  color: #ffffff; 
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* ==========================================================================
+   ESTILOS ESPECÍFICOS DA PÁGINA DE LOGIN
+   ========================================================================== */
+
+/* Corpo da página de login com a grelha decorativa idêntica à Hero */
+.login-body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh !important;
+  background-color: #05192d !important; /* Mesmo azul escuro da Hero */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+/* Padrão de linhas azuis ao fundo do login */
+.login-body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0; 
+  background-image:
+    linear-gradient(rgba(26, 111, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 111, 255, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* Envelopador central */
+.login-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 440px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* O Cartão de Login Translúcido Futurista */
+.login-card {
+  background: rgba(30, 41, 59, 0.7) !important; /* Caixa escura semi-transparente */
+  backdrop-filter: blur(12px);                 /* Efeito de vidro foscado */
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  padding: 40px 32px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Cabeçalho do Login */
+.login-header {
+  text-align: center !important;
+  margin-bottom: 32px !important;
+}
+/* --- LOGÓTIPO SERIFADO IDÊNTICO À IMAGEM --- */
+.login-header h2 {
+  font-family: 'DM Serif Display', serif !important; /* Aplica a fonte elegante */
+  font-size: 2.6rem !important;                     /* Tamanho imponente */
+  color: #ffffff !important;                        /* Pinta a primeira parte ("Med") de branco */
+  font-weight: 400 !important;                      /* Fontes serifadas usam peso normal/leve */
+  letter-spacing: -0.5px !important;                /* Junta as letras de forma elegante */
+  margin: 0 0 4px 0 !important;
+  text-align: center !important;
+}
+
+/* Transforma o resto do texto ("Invent") em verde brilhante */
+.login-header h2 span {
+  color: #00cc99 !important;                        /* O verde oficial da marca */
+  font-family: 'DM Serif Display', serif !important;
+}
+
+.login-header p {
+  font-size: 0.9rem !important;
+  color: #64748b !important;
+  margin: 0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  font-weight: bold !important;
+}
+
+/* Estrutura dos Campos de Input */
+.input-group-custom {
+  margin-bottom: 24px !important;
+  display: flex;
+  flex-direction: column;
+}
+.input-group-custom label {
+  font-size: 0.85rem !important;
+  color: #cbd5e1 !important; /* Texto claro e legível */
+  margin-bottom: 8px !important;
+  font-weight: 600 !important;
+}
+.input-wrapper {
+  position: relative !important;
+  display: flex;
+  align-items: center;
+}
+.input-wrapper input {
+  width: 100% !important;
+  background-color: #0b1726 !important; /* Fundo do input muito escuro */
+  border: 1px solid #1e293b !important;
+  border-radius: 8px !important;
+  padding: 12px 16px 12px 42px !important; /* Espaço na esquerda para o ícone */
+  color: #ffffff !important;
+  font-size: 0.95rem !important;
+  outline: none !important;
+  transition: border-color 0.2s ease;
+}
+/* Efeito de foco ao clicar no campo */
+.input-wrapper input:focus {
+  border-color: #00bcff !important; /* Borda acende em azul ao digitar */
+  box-shadow: 0 0 0 2px rgba(0, 188, 255, 0.1) !important;
+}
+/* Ícones dentro dos Inputs */
+.input-icon {
+  position: absolute !important;
+  left: 14px !important;
+  color: #64748b !important; /* Cinzento discreto */
+  font-size: 1.1rem !important;
+  z-index: 1 !important;
+}
+
+/* Botão Entrar (Estilo robusto herdado do botão azul público) */
+.btn-login {
+  width: 100% !important;
+  padding: 14px !important;
+  background-color: #00bcff !important; /* Azul brilhante */
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 46px !important;
+  line-height: 1 !important;
+  gap: 8px !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s, transform 0.2s !important;
+}
+.btn-login:hover {
+  background-color: #009cd3 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Link Inferior de Voltar */
+.login-footer {
+  text-align: center !important;
+  margin-top: 24px !important;
+}
+.login-footer a {
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: color 0.2s ease !important;
+}
+.login-footer a:hover {
+  color: #00cc99 !important; /* Acende em verde ao passar o rato */
+}
