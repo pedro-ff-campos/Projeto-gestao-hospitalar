@@ -143,19 +143,84 @@ body {
 /* Rodapé do Utilizador na Sidebar */
 .sidebar-footer {
   margin-top: auto !important;
-  padding: 24px !important;
+  padding: 16px 24px !important; /* Reduzido ligeiramente para dar mais espaço vertical */
   border-top: 1px solid #1e293b !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important; /* Afasta o nome para a esquerda e a seta para a direita */
 }
+
 .user-info strong {
   font-size: 0.85rem !important;
   color: #f8fafc !important;
   display: block !important;
 }
+
 .user-info small {
   font-size: 0.75rem !important;
   color: #64748b !important;
   display: block !important;
 }
+
+/* ── O Novo Botão da Seta (Apenas este reage ao rato) ── */
+.btn-seta-dropdown {
+  background: none !important;
+  border: none !important;
+  color: #64748b !important; /* Cor cinzenta discreta inicial */
+  padding: 6px 10px !important;
+  border-radius: 6px !important; /* Cantos redondos do quadrado */
+  transition: all 0.2s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Remove a seta antiga automática que o Bootstrap criava */
+.btn-seta-dropdown::after {
+  display: none !important;
+}
+
+/* O HOVER: Cria o quadrado transparente e acende a seta APENAS ao passar o rato nela */
+.btn-seta-dropdown:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important; /* Quadrado com cantos redondos e transparente */
+  color: #f8fafc !important; /* A seta passa a branco brilhante */
+  cursor: pointer !important;
+}
+
+/* ── Estilo da Caixa Flutuante do Menu Dropdown ── */
+.sidebar-footer .dropdown-menu {
+  background-color: #151c2c !important; /* Mesmo tom azul-marinho dos teus cartões */
+  border: 1px solid #242f47 !important;
+  border-radius: 8px !important;
+  width: 180px !important; /* Tamanho fixo ideal para o menu não quebrar */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+  padding: 4px !important;
+}
+
+/* Opções lá dentro */
+.sidebar-footer .dropdown-item {
+  color: #f8fafc !important;
+  font-size: 0.85rem !important;
+  padding: 8px 12px !important;
+  border-radius: 6px !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.sidebar-footer .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Força a cor vermelha apenas no botão de Terminar Sessão */
+.sidebar-footer .dropdown-item.text-danger {
+  color: #ef4444 !important; /* Vermelho vivo e moderno */
+}
+
+/* Muda ligeiramente a cor de fundo quando passas o rato por cima do Terminar Sessão */
+.sidebar-footer .dropdown-item.text-danger:hover {
+  background-color: rgba(239, 68, 68, 0.1) !important; /* Fundo vermelho muito clarinho e transparente */
+}
+
+
 
 /* ==========================================================================
    2. CONTEÚDO PRINCIPAL (MAIN E TOPBAR)
@@ -569,14 +634,8 @@ footer {
     }
 }
 
-/* ======= ESTILOS PÁGINA EQUIPAMENTOS ======== */
-
-
-/* 1. Títulos e Subtítulos */
-
-
 /* ==========================================================================
-   ESTILOS DA PÁGINA DE EQUIPAMENTOS (FILTROS E TABELA) - ATUALIZADO
+   ESTILOS DA PÁGINA DE EQUIPAMENTOS (FILTROS E TABELA) 
    ========================================================================== */
 
 /* 1. Títulos, Subtítulos e Respiração do Painel Principal */

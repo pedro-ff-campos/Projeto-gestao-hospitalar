@@ -65,13 +65,27 @@
       </a>
     </div>
 
-    <!-- Rodapé do Utilizador no Fundo da Sidebar -->
+    <!-- Rodapé do Utilizador com Menu Dropdown Bootstrap -->
+    <!-- Rodapé do Utilizador com Botão de Seta Independente -->
     <div class="sidebar-footer">
       <div class="user-info">
         <strong>Nome do Utilizador</strong>
         <small>Administrador</small>
       </div>
+
+      <div class="dropdown">
+        <button class="btn-seta-dropdown dropdown-toggle" type="button" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow" aria-labelledby="dropdownUser">
+          <li><a class="dropdown-item" href="/private/perfil.php"><i class="bi bi-person me-2"></i> O meu Perfil</a></li>
+          <li><a class="dropdown-item" href="/private/configuracoes.php"><i class="bi bi-gear me-2"></i> Configurações</a></li>
+          <li><hr class="dropdown-divider border-secondary"></li>
+          <li><a class="dropdown-item text-danger" href="../../logout.php"><i class="bi bi-box-arrow-right me-2"></i> Terminar Sessão</a></li>
+        </ul>
+      </div>
     </div>
+
   </aside>
 
   <!-- ── ABRE A CLASSE MAIN ── -->
