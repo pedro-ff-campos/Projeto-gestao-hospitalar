@@ -1110,3 +1110,204 @@ main.pagina-contratos .btn-outline-primary:hover {
   background-color: #00bfa5 !important;
   color: #151c2c !important;
 }
+
+/* ==========================================================================
+   7. AJUSTES EXCLUSIVOS PARA A PESQUISA AVANÇADA
+   ========================================================================== */
+
+/* Garante que as tabelas da pesquisa têm o mesmo visual de herança escura */
+.pagina-equipamentos .table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: transparent !important;
+}
+
+.pagina-equipamentos .table th {
+    background: rgba(255, 255, 255, 0.02) !important;
+    color: #94a3b8 !important;         
+    font-size: 12px !important;         
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    padding: 14px 16px !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important; 
+}
+
+.pagina-equipamentos .table td {
+    padding: 16px !important;
+    color: #e2e8f0 !important;
+    font-size: 14px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Formata o botão de Limpar para ficar com a mesma cor cinzenta da tua listagem */
+.pagina-equipamentos .btn-outline-light {
+    color: #94a3b8 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    padding: 10px 20px !important;
+    transition: all 0.2s ease;
+}
+
+.pagina-equipamentos .btn-outline-light:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ── Correção de Cores para a Pesquisa Avançada ── */
+
+/* Coloca todos os títulos dos campos (labels) a branco brilhante */
+.pagina-equipamentos .form-label {
+    color: #ffffff !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Coloca o texto selecionado dentro das caixas (selects e inputs) a branco */
+.pagina-equipamentos .form-control,
+.pagina-equipamentos .form-select {
+    color: #ffffff !important;
+}
+
+/* Garante que o texto placeholder (ajuda de escrita) fica num cinzento bem legível */
+.pagina-equipamentos .form-control::placeholder {
+    color: #94a3b8 !important;
+    opacity: 1 !important;
+}
+
+/* ==========================================================================
+   8. AJUSTES EXCLUSIVOS PARA A PÁGINA DE RELATÓRIOS
+   ========================================================================== */
+
+/* Garante o design e espaçamento das tabelas internas dos relatórios */
+.pagina-relatorios .table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    background: transparent !important;
+}
+
+.pagina-relatorios .table th {
+    background: rgba(255, 255, 255, 0.02) !important;
+    color: #94a3b8 !important;         
+    font-size: 12px !important;         
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    padding: 14px 16px !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important; 
+}
+
+.pagina-relatorios .table td {
+    padding: 14px 16px !important;
+    color: #e2e8f0 !important;
+    font-size: 14px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Formatação dos números grandes nos três cartões de topo */
+.pagina-relatorios h2 {
+    font-size: 32px !important;
+    color: #ffffff !important;
+    letter-spacing: -0.5px;
+    margin-top: 5px !important;
+}
+
+/* Dá um efeito luminoso suave de profundidade ao passar o rato nos cartões estatísticos */
+.pagina-relatorios .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.pagina-relatorios .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ── Correção de Cores para a Página de Relatórios ── */
+
+/* Coloca o texto pequeno explicativo abaixo dos ícones a cinzento claro legível */
+.pagina-relatorios .text-muted {
+    color: #94a3b8 !important;
+}
+
+/* Coloca os títulos pequenos de cada secção a branco brilhante */
+.pagina-relatorios h3 {
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Coloca o texto das mensagens de estado vazio (ex: "Nenhum contrato ativo") a cinzento nítido */
+.pagina-relatorios .card p.text-muted {
+    color: #a0aec0 !important;
+    font-size: 14px !important;
+}
+
+/* ==========================================================================
+   9. AJUSTES EXCLUSIVOS PARA AS CONFIGURAÇÕES (CMS)
+   ========================================================================== */
+
+/* Ajuste das áreas de texto (textarea) para seguirem o tamanho dos inputs */
+main.pagina-equipamentos textarea.form-control {
+    resize: vertical !important; /* Permite esticar apenas na vertical sem quebrar o card */
+    min-height: 80px;
+}
+
+/* Cor e destaque dos subtítulos azuis das secções */
+main.pagina-equipamentos h3 {
+    font-family: system-ui, -apple-system, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #00bcff !important; /* O teu azul ciano de foco para destacar as secções */
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 16px !important;
+}
+
+/* Linha divisória discreta entre os blocos de formulário */
+main.pagina-equipamentos hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    margin: 24px 0 !important;
+    opacity: 1 !important;
+}
+
+/* Estilo para as mensagens de feedback dentro do painel */
+main.pagina-equipamentos .alert {
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: none !important;
+}
+
+main.pagina-equipamentos .alert-success {
+    background-color: rgba(0, 204, 153, 0.15) !important;
+    color: #00cc99 !important;
+    border: 1px solid rgba(0, 204, 153, 0.2) !important;
+}
+
+/* ── Correção de Cores para a Página de Perfil ── */
+
+/* Coloca os títulos pequenos do cartão esquerdo a cinzento claro e visível */
+.pagina-equipamentos .text-muted {
+    color: #94a3b8 !important;
+}
+
+/* Força os dados textuais (o teu e-mail e os traços da data) a ficarem a branco */
+.pagina-equipamentos .text-white,
+.pagina-equipamentos span.text-white {
+    color: #ffffff !important;
+}
+
+/* Garante que o texto que digitas dentro dos inputs do perfil fica totalmente branco */
+.pagina-equipamentos .form-control {
+    color: #ffffff !important;
+}
+
+/* Força o texto do botão do perfil a ficar branco */
+.pagina-equipamentos .btn-success {
+    color: #ffffff !important;
+}
