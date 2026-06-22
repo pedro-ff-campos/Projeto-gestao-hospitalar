@@ -841,6 +841,64 @@ main h1 {
     margin: 0 !important;
 }
 
+/* ════════════ ADICIONADO PARA O FORMULÁRIO CRIAR ════════════ */
+
+/* 1. Faz o cartão do formulário herdar o mesmo azul-escuro das tuas secções */
+main.pagina-equipamentos .card {
+    background: #111a2e !important;   
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+/* 2. Formata os rótulos (labels) do formulário como fizeste com os filtros */
+main.pagina-equipamentos .form-label {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #64748b !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* 3. Transforma os inputs e selects brancos do Bootstrap para o teu tom Dark Mode (.btn-seta) */
+main.pagina-equipamentos .form-control, 
+main.pagina-equipamentos .form-select {
+    background: #0b1b3d !important; 
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    padding: 10px 14px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    outline: none !important;
+    transition: border-color 0.2s !important;
+}
+
+/* 4. O efeito luminoso ao clicar nos campos do formulário */
+main.pagina-equipamentos .form-control:focus, 
+main.pagina-equipamentos .form-select:focus {
+    border-color: #00bcff !important; 
+    box-shadow: none !important;      
+}
+
+/* 5. Ajuste para o botão voltar (Voltar à Lista) herdar o teu design discreto */
+.btn-outline-light {
+    color: #94a3b8 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+}
+
+.btn-outline-light:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+
 /* ==========================================================================
    BADGES DE ESTADO E CRITICIDADE (IDÊNTICOS AO DASHBOARD)
    ========================================================================== */
