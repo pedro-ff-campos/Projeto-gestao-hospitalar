@@ -5,6 +5,7 @@ declare(strict_types=1);
 
 $prefixo = '../../'; // Prefixo para os includes
 
+require_once '../../includes/auth.php';
 require_once '../../includes/db.php';     
 
 // ── Variáveis para o header ──────────────────────────────────────────────────

@@ -5,8 +5,8 @@ declare(strict_types=1);
 // 1. Variável para o header carregar o CSS a partir desta subpasta
 $prefixo = '../../';
 
-// 2. Includes obrigatórios do sistema (auth comentado por enquanto)
-// require_once '../../includes/auth.php';   
+
+require_once '../../includes/auth.php';   
 require_once '../../includes/db.php';     
 
 // ── Variáveis para o header ──────────────────────────────────────────────────

@@ -4,8 +4,8 @@ declare(strict_types=1);
 // 1. Variável para o header saber recuar até à raiz e carregar o teu CSS
 $prefixo = '../../';
 
-// 2. Includes obrigatórios do sistema (auth comentado por enquanto, como pediste)
-// require_once '../../includes/auth.php';   
+
+require_once '../../includes/auth.php';   
 require_once '../../includes/db.php';     
 
 // ── Variáveis para o header ──────────────────────────────────────────────────

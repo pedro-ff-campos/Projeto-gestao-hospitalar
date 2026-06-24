@@ -6,10 +6,10 @@ session_start();
 
 $user_id = $_SESSION['user_id'] ?? 0;
 
-//if ($user_id === 0) {
- //   header('Location: ../login.php');
-  //  exit;
-//}
+if ($user_id === 0) {
+    header('Location: ../login.php');
+    exit;
+}
 
 // Quando o utilizador altera o Nome ou o E-mail
 // ... (teu código inicial de sessão e includes) ...

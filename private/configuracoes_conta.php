@@ -5,10 +5,10 @@ $prefixo = '../';
 require_once '../includes/db.php';     
 session_start();
 
-//if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
-    //header('Location: ../login.php');
-    //exit;
-//}
+if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
+    header('Location: ../login.php');
+    exit;
+}
 
 $user_id = (int)($_SESSION['user_id'] ?? 0);
 $sucesso_mensagem = '';

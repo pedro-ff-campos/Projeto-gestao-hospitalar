@@ -5,7 +5,7 @@ declare(strict_types=1);
 $prefixo = '../../';
 
 // 2. Includes obrigatórios do sistema
-// require_once '../../includes/auth.php'; // Ativas quando o login estiver operacional
+require_once '../../includes/auth.php'; 
 require_once '../../includes/db.php';     
 
 // ── Variáveis para o header ──────────────────────────────────────────────────

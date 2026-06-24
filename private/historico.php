@@ -9,10 +9,10 @@ require_once '../includes/db.php';
 session_start();
 
 // Proteção básica de sessão
-//if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
-   // header('Location: ../login.php');
-   // exit;
-//}
+if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
+   header('Location: ../login.php');
+   exit;
+}
 
 // ── Paginação Simples para os Logs ───────────────────────────────────────────
 $registos_por_pagina = 15;

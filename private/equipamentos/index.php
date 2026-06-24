@@ -8,6 +8,7 @@ $prefixo = '../../'; // Define o prefixo para os includes (ajusta conforme a est
 // 1. CARREGAR O HEADER PRIVADO (Trata da Sessão, Bootstrap e liga a variável $pdo da BD)
 
 require_once '../../includes/header.php';
+require_once '../../includes/auth.php';
 require_once '../../includes/db.php';
 // 2. PAGINAÇÃO (Configuração básica)
 $itens_por_pagina = 10;
@@ -77,7 +78,19 @@ $localizacoes = $stmt_loc->fetchAll(PDO::FETCH_ASSOC);
       <h1>Equipamentos</h1>
       <a href="criar.php" class="btn-novo"><i class="fa-solid fa-plus"></i> Novo Equipamento</a>
     </div>
- 
+    <!-- GRUPO DE BOTÕES DE EXPORTAÇÃO AVANÇADA (Injetar ao lado do botão de criar) -->
+    <div class="btn-group btn-group-sm ms-2" role="group" aria-label="Exportar Dados">
+    <a href="exportar.php?tipo=csv" class="btn btn-outline-secondary text-white border-secondary" title="Exportar para Excel (CSV)">
+        <i class="fa-solid fa-file-excel me-1" style="color: #10b981;"></i> Excel
+    </a>
+    <a href="exportar.php?tipo=json" class="btn btn-outline-secondary text-white border-secondary" title="Exportar para JSON">
+        <i class="fa-solid fa-file-code me-1" style="color: #00bcff;"></i> JSON
+    </a>
+    <a href="exportar.php?tipo=pdf" target="_blank" class="btn btn-outline-secondary text-white border-secondary" title="Imprimir / Guardar em PDF">
+        <i class="fa-solid fa-file-pdf me-1" style="color: #ef4444;"></i> PDF
+    </a>
+    </div>
+
     <!-- ── Mensagens de feedback (preenchidas pelo PHP após operações CRUD) ── -->
     <?php if (isset($_GET['sucesso'])): ?>
       <div class="alerta alerta-sucesso">
