@@ -1,0 +1,135 @@
+
+Table utilizadores {
+  id int [pk, increment]
+  nome varchar(100) [not null]
+  email varchar(100) [unique, not null]
+  password varchar(255) [not null]
+  hospital varchar(150) [default: 'Hospital Geral']
+  criado_at datetime [default: `now()` ]
+}
+
+Table logs {
+  id int [pk, increment]
+  utilizador_id int [null]
+  acao varchar(50) [not null]
+  detalhes text [not null]
+  criado_at datetime [not null]
+}
+
+Table localizacoes {
+  id int [pk, increment]
+  edificio varchar(100) [not null]
+  piso varchar(50) [not null]
+  servico varchar(100) [not null]
+  sala varchar(100) [not null]
+}
+
+Table categorias {
+  id int [pk, increment]
+  nome varchar(100) [not null]
+  descricao text
+}
+
+Table fornecedores {
+  id int [pk, increment]
+  nome varchar(150) [not null]
+  nif varchar(20) [not null]
+  telefone varchar(20)
+  email varchar(100)
+  morada text
+  website varchar(150)
+  pessoa_contacto varchar(100)
+  telefone_contacto varchar(20)
+  tipo varchar(50)
+  observacoes text
+}
+
+Table equipamentos {
+  id int [pk, increment]
+  codigo varchar(50) [unique, not null]
+  designacao varchar(150) [not null]
+  marca varchar(100)
+  modelo varchar(100)
+  numero_serie varchar(100)
+  fabricante varchar(100)
+  data_aquisicao date
+  ano_fabrico int
+  custo_aquisicao decimal(10,2)
+  tipo_entrada varchar(50)
+  estado varchar(50) [not null]
+  criticidade varchar(50) [not null]
+  observacoes text
+  id_localizacao int [not null]
+  id_categoria int [not null]
+}
+
+Table equipamento_fornecedor {
+  id_equipamento int [not null]
+  id_fornecedor int [not null]
+  
+  Indexes {
+    (id_equipamento, id_fornecedor) [pk]
+  }
+}
+
+Table documentacao {
+  id int [pk, increment]
+  tipo varchar(100) [not null]
+  titulo varchar(150) [not null]
+  data_documento date
+  data_validade date
+  ficheiro varchar(255) [not null]
+  observacoes text
+  id_equipamento int [not null]
+  id_fornecedor int [null]
+}
+
+Table garantias {
+  id int [pk, increment]
+  referencia varchar(100) [default: '—']
+  fornecedor_garantia varchar(150) [default: '—']
+  data_inicio date
+  data_fim date [not null]
+  observacoes text
+  id_equipamento int [not null]
+}
+
+Table contratos {
+  id int [pk, increment]
+  numero_contrato varchar(100) [not null]
+  tipo varchar(100)
+  entidade_responsavel varchar(150)
+  periodicidade varchar(50)
+  data_inicio date
+  data_fim date [not null]
+  valor decimal(10,2) [null]
+  observacoes text
+  id_equipamento int [not null]
+  id_fornecedor int [null]
+}
+
+Table conteudos_publicos {
+  id int [pk, increment]
+  chave varchar(100) [unique, not null]
+  valor text [not null]
+  descricao varchar(255)
+  atualizado_em datetime [default: `now()` ]
+}
+
+// ════════════ CONCURRÊNCIA DE RELAÇÕES (Restrições) ════════════
+
+Ref: logs.utilizador_id > utilizadores.id [delete: set null]
+
+Ref: equipamentos.id_localizacao > localizacoes.id [delete: restrict]
+Ref: equipamentos.id_categoria > categorias.id [delete: restrict]
+
+Ref: equipamento_fornecedor.id_equipamento > equipamentos.id [delete: cascade]
+Ref: equipamento_fornecedor.id_fornecedor > fornecedores.id [delete: restrict]
+
+Ref: documentacao.id_equipamento > equipamentos.id [delete: cascade]
+Ref: documentacao.id_fornecedor > fornecedores.id [delete: restrict]
+
+Ref: garantias.id_equipamento > equipamentos.id [delete: cascade]
+
+Ref: contratos.id_equipamento > equipamentos.id [delete: cascade]
+Ref: contratos.id_fornecedor > fornecedores.id [delete: restrict]
