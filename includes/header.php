@@ -91,7 +91,6 @@
         <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow" aria-labelledby="dropdownUser">
           <li><a class="dropdown-item" href="<?php echo $prefixo; ?>perfil.php"><i class="bi bi-person me-2"></i> O meu Perfil</a></li>
           <li><a class="dropdown-item" href="<?php echo $prefixo; ?>configuracoes_conta.php"><i class="bi bi-gear me-2"></i> Configurações</a></li>
-          <li><a class="dropdown-item" href="<?php echo $prefixo; ?>historico.php"><i class="bi bi-clock-history me-2"></i> Histórico de Logs</a></li>
           
           <li><hr class="dropdown-divider border-secondary"></li>
           
