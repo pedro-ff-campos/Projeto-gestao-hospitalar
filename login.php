@@ -67,9 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<!-- ==========================================================================
-     2. ESTRUTURA HTML DA PÁGINA (Livre de <br> e integrada com o CSS)
-     ========================================================================== -->
 <!DOCTYPE html>
 <html lang="pt">
 <head>

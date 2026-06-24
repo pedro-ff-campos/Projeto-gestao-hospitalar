@@ -37,22 +37,22 @@ body {
 }
 /* --- LOGÓTIPO SERIFADO NA BARRA LATERAL PRIVADA --- */
 .sidebar-logo h1 {
-  font-family: 'DM Serif Display', serif !important; /* Aplica a fonte serifada elegante */
-  font-size: 1.6rem !important;                     /* Tamanho proporcional para a barra lateral */
-  color: #ffffff !important;                        /* A primeira parte ("Med") fica a BRANCO */
-  font-weight: 400 !important;                      /* Peso normal característico desta fonte */
-  letter-spacing: -0.5px !important;                /* Junta as letras de forma elegante */
+  font-family: 'DM Serif Display', serif !important; 
+  font-size: 1.6rem !important;                    
+  color: #ffffff !important;                        
+  font-weight: 400 !important;                      
+  letter-spacing: -0.5px !important;                
   margin: 0 !important;
 }
 
-/* --- FIX DEFINITIVO DO TAMANHO DO LOGÓTIPO --- */
+
 .sidebar-logo h1 span {
-  font-family: 'DM Serif Display', serif !important; /* Mantém a fonte serifada */
-  color: #10b981 !important;                        /* Mantém o verde oficial */
-  display: inline-block !important;                  /* Mantém na mesma linha */
-  font-size: 1.6rem !important;                     /* FORÇA exatamente o mesmo tamanho do "Med" */
-  font-weight: 400 !important;                      /* Garante a mesma espessura leve */
-  text-transform: none !important;                   /* Impede que fique em maiúsculas minúsculas */
+  font-family: 'DM Serif Display', serif !important; 
+  color: #10b981 !important;                        
+  display: inline-block !important;                  
+  font-size: 1.6rem !important;                     
+  font-weight: 400 !important;                      
+  text-transform: none !important;                   
   letter-spacing: -0.5px !important;
 }
 
@@ -65,7 +65,7 @@ body {
   margin-top: 4px !important;
 }
 
-/* --- MENU VERTICAL (CORREÇÃO DE JACTO) --- */
+/* --- MENU VERTICAL --- */
 .sidebar nav {
   display: flex !important;
   flex-direction: column !important;
@@ -83,9 +83,9 @@ body {
   font-size: 0.7rem !important;
   text-transform: uppercase !important;
   letter-spacing: 0.08em !important;
-  color: #475569 !important;            /* Cinzento escuro discreto */
+  color: #475569 !important;            
   font-weight: bold !important;
-  text-align: left !important;          /* Força a escrita na margem esquerda */
+  text-align: left !important;          
   width: 100% !important;
 }
 
@@ -114,13 +114,13 @@ body {
 }
 
 .sidebar-links-wrapper a {
-  display: flex !important;            /* Ícone ao lado do texto */
-  align-items: center !important;      /* Centra verticalmente */
-  justify-content: flex-start !important; /* Alinha tudo à esquerda */
-  gap: 12px !important;                /* Espaço entre o ícone e a palavra */
-  padding: 12px 24px !important;       /* Margem interna para o clique ser grande */
-  color: #94a3b8 !important;           /* Cor cinzenta clara padrão */
-  text-decoration: none !important;    /* Remove o sublinhado azul */
+  display: flex !important;            
+  align-items: center !important;      
+  justify-content: flex-start !important; 
+  gap: 12px !important;               
+  padding: 12px 24px !important;       
+  color: #94a3b8 !important;           
+  text-decoration: none !important;    
   font-size: 0.875rem !important;
   font-weight: 500 !important;
   width: 100% !important;
@@ -130,24 +130,24 @@ body {
 
 /* 3. Efeito ao passar o rato (Hover) */
 .sidebar-links-wrapper a:hover {
-  background-color: #1e293b !important; /* Fundo ligeiramente mais claro */
-  color: #f8fafc !important;            /* Texto quase branco */
+  background-color: #1e293b !important; 
+  color: #f8fafc !important;            
 }
 
 .sidebar-links-wrapper a.active {
-  color: #10b981 !important;            /* Texto no verde oficial */
-  background-color: #1e293b !important; /* Fundo destacado */
+  color: #10b981 !important;            
+  background-color: #1e293b !important; 
   font-weight: 600 !important;
 }
 
 /* Rodapé do Utilizador na Sidebar */
 .sidebar-footer {
   margin-top: auto !important;
-  padding: 16px 24px !important; /* Reduzido ligeiramente para dar mais espaço vertical */
+  padding: 16px 24px !important; 
   border-top: 1px solid #1e293b !important;
   display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important; /* Afasta o nome para a esquerda e a seta para a direita */
+  justify-content: space-between !important; 
 }
 
 .user-info strong {
@@ -162,37 +162,37 @@ body {
   display: block !important;
 }
 
-/* ── O Novo Botão da Seta (Apenas este reage ao rato) ── */
+/* ── Botão da Seta  ── */
 .btn-seta-dropdown {
   background: none !important;
   border: none !important;
-  color: #64748b !important; /* Cor cinzenta discreta inicial */
+  color: #64748b !important; 
   padding: 6px 10px !important;
-  border-radius: 6px !important; /* Cantos redondos do quadrado */
+  border-radius: 6px !important; 
   transition: all 0.2s ease !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
-/* Remove a seta antiga automática que o Bootstrap criava */
+
 .btn-seta-dropdown::after {
   display: none !important;
 }
 
-/* O HOVER: Cria o quadrado transparente e acende a seta APENAS ao passar o rato nela */
+/* O HOVER: Cria o quadrado transparente e acende a seta ao passar o rato nela */
 .btn-seta-dropdown:hover {
-  background-color: rgba(255, 255, 255, 0.08) !important; /* Quadrado com cantos redondos e transparente */
-  color: #f8fafc !important; /* A seta passa a branco brilhante */
+  background-color: rgba(255, 255, 255, 0.08) !important; 
+  color: #f8fafc !important; 
   cursor: pointer !important;
 }
 
 /* ── Estilo da Caixa Flutuante do Menu Dropdown ── */
 .sidebar-footer .dropdown-menu {
-  background-color: #151c2c !important; /* Mesmo tom azul-marinho dos teus cartões */
+  background-color: #151c2c !important; 
   border: 1px solid #242f47 !important;
   border-radius: 8px !important;
-  width: 180px !important; /* Tamanho fixo ideal para o menu não quebrar */
+  width: 180px !important; 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
   padding: 4px !important;
 }
@@ -210,14 +210,14 @@ body {
   background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
-/* Força a cor vermelha apenas no botão de Terminar Sessão */
+/* Força a cor vermelha no botão de Terminar Sessão */
 .sidebar-footer .dropdown-item.text-danger {
-  color: #ef4444 !important; /* Vermelho vivo e moderno */
+  color: #ef4444 !important; 
 }
 
-/* Muda ligeiramente a cor de fundo quando passas o rato por cima do Terminar Sessão */
+/* Muda ligeiramente a cor de fundo quando passar o rato por cima do Terminar Sessão */
 .sidebar-footer .dropdown-item.text-danger:hover {
-  background-color: rgba(239, 68, 68, 0.1) !important; /* Fundo vermelho muito clarinho e transparente */
+  background-color: rgba(239, 68, 68, 0.1) !important; 
 }
 
 
@@ -268,20 +268,20 @@ body {
 }
 
 .topbar-search input {
-  background-color: #1e293b !important; /* Fundo ligeiramente mais claro que o da topbar */
-  border: 1px solid #334155 !important;  /* Borda discreta */
-  border-radius: 8px !important;         /* Cantos arredondados iguais aos botões */
-  padding: 10px 16px 10px 40px !important; /* Espaço na esquerda para não sobrepor o ícone */
-  color: #f8fafc !important;             /* Texto claro ao digitar */
+  background-color: #1e293b !important; 
+  border: 1px solid #334155 !important;  
+  border-radius: 8px !important;         
+  padding: 10px 16px 10px 40px !important; 
+  color: #f8fafc !important;             
   font-size: 0.85rem !important;
-  width: 240px !important;               /* Largura elegante para o campo */
+  width: 240px !important;               
   transition: all 0.15s ease !important;
 }
 
 /* Efeito de foco quando o utilizador clica para digitar */
 .topbar-search input:focus {
   outline: none !important;
-  border-color: #10b981 !important;     /* Borda fica verde ao clicar */
+  border-color: #10b981 !important;    
   box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1) !important;
 }
 
@@ -289,9 +289,9 @@ body {
 .topbar-search .search-icon {
   position: absolute !important;
   left: 14px !important;
-  color: #64748b !important;             /* Cinzento discreto */
+  color: #64748b !important;            
   font-size: 0.9rem !important;
-  pointer-events: none !important;       /* Garante que o clique passa para o input */
+  pointer-events: none !important;       
 }
 
 
@@ -346,7 +346,7 @@ body {
   padding: 32px !important;
   flex: 1 !important;
   box-sizing: border-box !important;
-  padding-top: 16px !important; /* Reduz o padding superior para dar mais espaço aos cartões e gráficos */
+  padding-top: 16px !important; 
 }
 
 .kpi-grid {
@@ -358,11 +358,11 @@ body {
 .kpi-card {
     background-color: #1e293b !important;
     border: 1px solid #334155 !important;
-    border-top: 4px solid #10b981 !important; /* Linha do topo ligeiramente mais espessa */
+    border-top: 4px solid #10b981 !important; 
     border-radius: 12px !important;
-    padding: 28px 24px !important; /* Mais respiro interno */
+    padding: 28px 24px !important; 
     position: relative !important;
-    min-height: 140px !important; /* Força o cartão a ser mais alto verticalmente */
+    min-height: 140px !important; 
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -374,7 +374,7 @@ body {
 .kpi-icon { position: absolute !important; top: 16px !important; right: 16px !important; color: #334155 !important; font-size: 1.2rem !important; }
 
 .kpi-grid, .panel {
-    padding: 0 !important; /* Remove o padding para que os blocos possam usar toda a área disponível */
+    padding: 0 !important; 
 }
 
 /* --- SEÇÃO INFERIOR EM DUAS COLUNAS --- */
@@ -382,15 +382,15 @@ body {
     display: grid !important;
     grid-template-columns: 2fr 1fr !important;
     gap: 24px !important;
-    align-items: stretch !important; /* ALTERADO: Força os blocos da esquerda e direita a terem o mesmo tamanho vertical */
+    align-items: stretch !important; 
     width: 100% !important;
 }
 
 .grid-lower .panel {
   display: block !important;
   height: auto !important;
-  min-height: 0 !important;   /* Força a eliminação de qualquer min-height anterior */
-  padding-bottom: 24px !important; /* Dá o respiro natural apenas no fim do bloco */
+  min-height: 0 !important;   
+  padding-bottom: 24px !important; 
 }
 
 /* 1. O painel agora lê de cima para baixo de forma natural */
@@ -399,16 +399,16 @@ body {
   border: 1px solid #334155 !important;
   border-radius: 12px !important;
   overflow: hidden !important;
-  display: block !important;       /* ALTERADO: Remove o flex que espalhava o conteúdo */
-  height: auto !important;         /* ALTERADO: Remove a altura fixa de 400px */
-  padding-bottom: 20px !important; /* Respiro elegante no fundo do bloco */
+  display: block !important;       
+  height: auto !important;         
+  padding-bottom: 20px !important; 
 }
 
 /* 2. Cabeçalho do Painel (Sempre colado ao topo) */
 .panel-header {
   padding: 18px 24px !important;
-  padding-top: 12px !important; /* Dá um pouco mais de respiro no topo do cabeçalho */
-  padding-bottom: 12px !important; /* Reduz o respiro inferior para colar melhor com o conteúdo */
+  padding-top: 12px !important; 
+  padding-bottom: 12px !important; 
   border-bottom: 1px solid #334155 !important;
   display: flex !important;
   align-items: center !important;
@@ -425,17 +425,17 @@ body {
 .alert-list, .bar-chart {
   display: block !important;
   height: auto !important;
-  padding-top: 12px !important; /* Respiro mínimo e elegante logo abaixo da linha */
+  padding-top: 12px !important; 
   margin: 0 !important;
 }
 
 /* 4. Repositor Nativo da Estrutura da Tabela */
 .panel table {
-  display: table !important;       /* Força o comportamento padrão de tabela */
+  display: table !important;      
   width: 100% !important;
   border-collapse: collapse !important;
-  margin-top: 0 !important;            /* Cola a tabela na linha do cabeçalho */
-  margin-bottom: 0 !important;         /* Remove o espaço extra no fundo do painel */
+  margin-top: 0 !important;            
+  margin-bottom: 0 !important;         
   padding: 0 !important;     
   border-top: none !important;         
 }
@@ -447,7 +447,7 @@ body {
 /* Células da tabela com espaçamento perfeito */
 .panel th, .panel td {
   display: table-cell !important;
-  padding: 14px 24px !important;   /* Alinhado com as margens do cabeçalho */
+  padding: 14px 24px !important;   
   text-align: left !important;
   vertical-align: middle !important;
 }
@@ -474,14 +474,14 @@ body {
 
 /* 3. Remove as margens e paddings no topo do gráfico de serviços */
 .panel .bar-chart {
-  padding-top: 12px !important; /* Mantém apenas um respiro mínimo e elegante */
+  padding-top: 12px !important; 
   margin-top: 0 !important;
 }
 
 /* 4. Garante que os itens de alerta e as linhas da tabela começam logo no topo */
 .alert-item:first-child {
-    margin-top: 0 !important; /* Remove qualquer margem superior */
-  padding-top: 8px !important; /* Define o mesmo espaçamento para todos */
+    margin-top: 0 !important; 
+  padding-top: 8px !important; 
 }
 
 
@@ -512,9 +512,9 @@ tbody tr:last-child td { border-bottom: none !important; }
 
 .alert-item { 
   display: flex !important; 
-  align-items: center !important; /* ALTERADO: Centra o ícone verticalmente com as duas linhas de texto */
-  gap: 16px !important;           /* Aumentado o espaço entre o ícone e o texto */
-  padding: 16px 24px !important;  /* Mais respiro interno idêntico à imagem */
+  align-items: center !important; 
+  gap: 16px !important;           
+  padding: 16px 24px !important;  
   border-bottom: 1px solid #1e293b !important; 
 }
 
@@ -524,43 +524,43 @@ tbody tr:last-child td { border-bottom: none !important; }
 
 /* Caixa do ícone maior e com cantos mais arredondados */
 .alert-icon { 
-  width: 42px !important;         /* Aumentado de 32px para 42px */
+  width: 42px !important;         
   height: 42px !important; 
-  border-radius: 10px !important; /* Cantos mais suaves como no print */
+  border-radius: 10px !important; 
   display: flex !important; 
   align-items: center !important; 
   justify-content: center !important; 
-  font-size: 1.1rem !important;   /* Destaca o ícone lá dentro */
+  font-size: 1.1rem !important;   
   flex-shrink: 0 !important; 
 }
 
 /* --- MAPA DE CORES OFICIAIS (MAIS ESCURAS E SATURADAS) --- */
 .ai-danger { 
-  background-color: #3b191e !important; /* Vermelho escuro de fundo */
-  color: #ef4444 !important;            /* Ícone vermelho vivo */
+  background-color: #3b191e !important; 
+  color: #ef4444 !important;            
 }
 
 .ai-warn { 
-  background-color: #3a2a18 !important; /* Laranja/Castanho escuro para as garantias */
-  color: #f59e0b !important;            /* Ícone laranja */
+  background-color: #3a2a18 !important; 
+  color: #f59e0b !important;            
 }
 
 .ai-info { 
-  background-color: #172554 !important; /* Fundo azul escuro para a preventiva */
-  color: #3b82f6 !important;            /* Ícone azul vivo */
+  background-color: #172554 !important; 
+  color: #3b82f6 !important;            
 }
 
 /* --- TEXTOS DOS ALERTAS --- */
 .alert-text strong { 
-  font-size: 0.85rem !important;  /* Texto do título ligeiramente maior */
+  font-size: 0.85rem !important;  
   display: block !important; 
   margin-bottom: 3px !important; 
   color: #f8fafc !important; 
 }
 
 .alert-text span { 
-  font-size: 0.75rem !important;  /* Texto da descrição secundária */
-  color: #64748b !important;      /* Um tom cinzento mais suave para dar contraste */
+  font-size: 0.75rem !important;  
+  color: #64748b !important;      
 }
 
 
@@ -584,20 +584,20 @@ footer {
 }
 
 .main-footer {
-  width: 100% !important;                  /* Ocupa toda a largura do ecrã principal */
-  padding: 24px 32px;           /* Alinha as margens com o resto do conteúdo */
-  border-top: 1px solid #1e293b;/* Linha fina divisória superior */
-  margin-top: auto;             /* Empurra o rodapé para o fundo absoluto da página */
-  text-align: center !important;           /* CENTRA O TEXTO PERFEITAMENTE */
-  box-sizing: border-box;       /* Evita quebras de margem */
-  display: block !important;                   /* Garante que o rodapé é um bloco completo */
-  clear: both !important;                    /* Limpa quaisquer flutuações anteriores para garantir que o rodapé fica abaixo de tudo */
+  width: 100% !important;                  
+  padding: 24px 32px;           
+  border-top: 1px solid #1e293b;
+  margin-top: auto;             
+  text-align: center !important;           
+  box-sizing: border-box;       
+  display: block !important;                   
+  clear: both !important;                    
 }
 
 .main-footer p {
   margin: 0;
   font-size: 0.75rem;
-  color: #64748b;               /* Tom cinzento discreto para o texto legal */
+  color: #64748b;               
 }
 
 
@@ -644,7 +644,7 @@ main.pagina-equipamentos {
     padding: 32px 40px !important;
     background: #0b1325 !important;
     min-height: 100vh !important;
-    display: block !important; /* Garante que não herda flex/grid do dashboard */
+    display: block !important; 
     width: 100% !important;
 }
 
@@ -657,7 +657,7 @@ main h1 {
     
 }
 
-/* NOVO: Formatado para ser um rótulo discreto dentro dos cartões */
+/* Formatado para ser um rótulo dentro dos cartões */
 .secao-filtros h2, .secao-listagem h2 {
     font-family: system-ui, -apple-system, sans-serif !important;
     font-size: 13px !important;
@@ -665,13 +665,13 @@ main h1 {
     color: #94a3b8 !important; 
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
-    margin-top: 0 !important;          /* ALTERADO: Remove margem para alinhar no topo do card */
+    margin-top: 0 !important;          
     margin-bottom: 20px !important;
 }
 
-/* NOVO: Envolve as secções em cartões elegantes para organizar o design */
+/* Envolve as secções em cartões elegantes para organizar o design */
 .secao-filtros, .secao-listagem {
-    background: #111a2e !important;   /* Azul escuro ligeiramente mais claro */
+    background: #111a2e !important;   
     border: 1px solid rgba(255, 255, 255, 0.04) !important;
     border-radius: 12px !important;
     padding: 24px !important;
@@ -700,7 +700,7 @@ main h1 {
     letter-spacing: 0.5px !important;
 }
 
-/* Transforma os inputs e selects brancos para o teu Dark Mode */
+/* Transforma os inputs e selects brancos para o Dark Mode */
 .campo-filtro input, .campo-filtro select {
     background: #0b1b3d !important; 
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -720,7 +720,7 @@ main h1 {
 .btn-novo {
     display: inline-block !important;
     background: #00cc99 !important; 
-    color: #0b1b3d !important;
+    color: #ffffff !important;
     padding: 8px 16px !important;
     border-radius: 8px !important;
     font-weight: 600 !important;
@@ -733,7 +733,7 @@ main h1 {
     opacity: 0.9 !important;
 }
 
-/* ALTERADO: Cria uma linha divisória discreta acima dos botões de ação */
+/* Criação de uma linha divisória discreta acima dos botões de ação */
 .filtros-acoes {
     display: flex !important;
     align-items: center !important;
@@ -747,7 +747,7 @@ main h1 {
     background: #00bcff !important; 
     color: #ffffff !important;
     border: none !important;
-    padding: 10px 28px !important;    /* ALTERADO: Mais largura para o botão respirar */
+    padding: 10px 28px !important;    
     border-radius: 8px !important;
     font-weight: 600 !important;
     font-size: 14px !important;
@@ -756,7 +756,7 @@ main h1 {
 }
 
 .filtros-acoes button:hover {
-    background: #0099dd !important;    /* ALTERADO: Feedback visual escurecido no hover */
+    background: #0099dd !important;    
 }
 
 .btn-limpar {
@@ -774,18 +774,18 @@ main h1 {
     width: 100% !important;
     border-collapse: collapse !important;
     margin-top: 8px !important;
-    background: transparent !important; /* ALTERADO: O fundo agora herda do cartão principal */
+    background: transparent !important; 
 }
 
 .tabela-med th {
     background: rgba(255, 255, 255, 0.02) !important;
-    color: #94a3b8 !important;         /* ALTERADO: Tom cinzento mais claro e nítido */
-    font-size: 12px !important;         /* ALTERADO: Subiu para 12px para melhor leitura */
+    color: #94a3b8 !important;         
+    font-size: 12px !important;         
     text-transform: uppercase !important;
     font-weight: 600 !important;
     letter-spacing: 0.5px !important;
     padding: 14px 16px !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important; /* ALTERADO: Linha mais forte */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 .tabela-med td {
@@ -798,9 +798,9 @@ main h1 {
 /* Mensagem de tabela sem dados */
 .tabela-vazia {
     text-align: center !important;
-    color: #94a3b8 !important;         /* ALTERADO: Subiu o contraste para melhor legibilidade */
-    padding: 60px !important;          /* ALTERADO: Mais espaço vertical para isolar o aviso */
-    font-style: normal !important;     /* ALTERADO: Texto direito para aspeto mais limpo */
+    color: #94a3b8 !important;         
+    padding: 60px !important;          
+    font-style: normal !important;     
     font-size: 15px !important;
     font-weight: 500 !important;
 }
@@ -843,7 +843,7 @@ main h1 {
 
 /* ════════════ ADICIONADO PARA O FORMULÁRIO CRIAR ════════════ */
 
-/* 1. Faz o cartão do formulário herdar o mesmo azul-escuro das tuas secções */
+/* 1. Faz o cartão do formulário herdar o mesmo azul-escuro das secções */
 main.pagina-equipamentos .card {
     background: #111a2e !important;   
     border: 1px solid rgba(255, 255, 255, 0.04) !important;
@@ -852,7 +852,7 @@ main.pagina-equipamentos .card {
     margin-bottom: 24px !important;
 }
 
-/* 2. Formata os rótulos (labels) do formulário como fizeste com os filtros */
+/* 2. Formata os rótulos (labels) do formulário como os filtros */
 main.pagina-equipamentos .form-label {
     font-size: 11px !important;
     font-weight: 600 !important;
@@ -863,7 +863,7 @@ main.pagina-equipamentos .form-label {
     margin-bottom: 6px;
 }
 
-/* 3. Transforma os inputs e selects brancos do Bootstrap para o teu tom Dark Mode (.btn-seta) */
+/* 3. Transforma os inputs e selects brancos do Bootstrap para o tom Dark Mode (.btn-seta) */
 main.pagina-equipamentos .form-control, 
 main.pagina-equipamentos .form-select {
     background: #0b1b3d !important; 
@@ -883,7 +883,7 @@ main.pagina-equipamentos .form-select:focus {
     box-shadow: none !important;      
 }
 
-/* 5. Ajuste para o botão voltar (Voltar à Lista) herdar o teu design discreto */
+/* 5. Ajuste para o botão voltar (Voltar à Lista) herdar o design discreto */
 .btn-outline-light {
     color: #94a3b8 !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -920,7 +920,7 @@ main.pagina-equipamentos .form-select:focus {
     background: rgba(0, 204, 153, 0.1) !important;
     color: #00cc99 !important;
 }
-/* Adiciona uma bolinha antes do texto estilo o teu dashboard */
+/* Adiciona uma bolinha antes do texto estilo no dashboard */
 .badge-ativo::before {
     content: "" !important;
     width: 6px !important;
@@ -1253,7 +1253,7 @@ main.pagina-contratos .btn-outline-primary:hover {
 
 /* Ajuste das áreas de texto (textarea) para seguirem o tamanho dos inputs */
 main.pagina-equipamentos textarea.form-control {
-    resize: vertical !important; /* Permite esticar apenas na vertical sem quebrar o card */
+    resize: vertical !important; 
     min-height: 80px;
 }
 
@@ -1262,7 +1262,7 @@ main.pagina-equipamentos h3 {
     font-family: system-ui, -apple-system, sans-serif !important;
     font-size: 13px !important;
     font-weight: 600 !important;
-    color: #00bcff !important; /* O teu azul ciano de foco para destacar as secções */
+    color: #00bcff !important; 
     text-transform: uppercase !important;
     letter-spacing: 0.5px !important;
     margin-bottom: 16px !important;
@@ -1310,4 +1310,194 @@ main.pagina-equipamentos .alert-success {
 /* Força o texto do botão do perfil a ficar branco */
 .pagina-equipamentos .btn-success {
     color: #ffffff !important;
+}
+
+/* ==========================================================================
+   11. POLIMENTO DO MENU FLUTUANTE DE NOTIFICAÇÕES (DASHBOARD)
+   ========================================================================== */
+
+/* Remove qualquer conflito de transbordo e garante que o menu abre direito */
+.notificacoes-dropdown {
+    overflow: hidden !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+    animation: abrirDropdownNotif 0.2s ease-out !important; 
+}
+
+/* Animação padrão de entrada (surge de cima para baixo com ligeiro fade) */
+@keyframes abrirDropdownNotif {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efeito básico interativo: destaca a linha do alerta quando o rato passa por cima */
+.notif-item {
+    transition: background-color 0.2s ease !important;
+    cursor: pointer;
+}
+
+.notif-item:hover {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+/* ── ESTILO E HOVER DO BOTÃO DO SINO (DASHBOARD) ── */
+
+/* Estado normal do botão */
+.icon-btn {
+    background-color: #111a2e !important; 
+    color: #94a3b8 !important;            
+    border: 1px solid rgba(255, 255, 255, 0.04) !important;
+    border-radius: 8px !important;
+    width: 38px !important;
+    height: 38px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease-in-out !important; 
+}
+
+/* Quando passas o rato por cima (Hover) */
+.icon-btn:hover {
+    background-color: #1e293b !important;  
+    color: #ffffff !important;             
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Quando o Engenheiro clica (Efeito de clique pressionado) */
+.icon-btn:active {
+    transform: scale(0.95) !important; 
+}
+
+/* ==========================================================================
+    PÁGINA DE CRIAÇÃO DE FORNECEDORES 
+   ========================================================================== */
+
+.pagina-criar-fornecedor {
+    padding: 40px !important;
+    min-height: 100vh !important;
+    background-color: #0b0f19 !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    float: none !important;
+}
+
+
+.form-header-bar {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 24px !important;
+    padding-bottom: 16px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.form-header-bar h1 {
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+}
+
+.form-header-bar small {
+    color: #64748b !important;
+    font-size: 13px !important;
+}
+
+.btn-voltar-listagem {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #94a3b8 !important;
+    font-size: 13px !important;
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+    text-decoration: none !important;
+    transition: background 0.2s !important;
+}
+
+.btn-voltar-listagem:hover {
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #ffffff !important;
+}
+
+.card-formulario-dark {
+    background: #111a2e !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-radius: 12px !important;
+    padding: 30px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.secção-titulo-biomedico {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #00bcff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 20px !important;
+    border-left: 3px solid #00bcff !important;
+    padding-left: 10px !important;
+}
+
+.label-custom {
+    color: #94a3b8 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+/* ── FORÇA O FUNDO ESCURO NOS INPUTS ── */
+.input-custom, .select-custom, .textarea-custom {
+    background-color: #1e293b !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    padding: 10px 14px !important;
+}
+
+.input-custom:focus, .select-custom:focus, .textarea-custom:focus {
+    background-color: #1e293b !important;
+    border-color: #00bcff !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 188, 255, 0.15) !important;
+}
+
+.textarea-custom {
+    resize: none !important;
+}
+
+.form-footer-actions {
+    display: flex !important;
+    justify-content: end !important;
+    gap: 16px !important;
+    margin-top: 24px !important;
+    padding-top: 16px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.btn-limpar-campos {
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #94a3b8 !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+    cursor: pointer !important;
+}
+
+.btn-gravar-dados {
+    background: #00bcff !important;
+    border: none !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    padding: 10px 24px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
 }

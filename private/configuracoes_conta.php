@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $erro_mensagem = 'A nova palavra-passe deve ter pelo menos 6 caracteres.';
     } else {
         try {
-            // 1. Vai buscar a password encriptada atual do utilizador à base de dados
+            // 1. Buscar a password encriptada atual do utilizador à base de dados
             $stmt_check = $pdo->prepare("SELECT password FROM utilizadores WHERE id = ?");
             $stmt_check->execute([$user_id]);
             $user = $stmt_check->fetch();
@@ -42,13 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $stmt_update = $pdo->prepare("UPDATE utilizadores SET password = ? WHERE id = ?");
                 $stmt_update->execute([$password_encriptada, $user_id]);
 
-                // EXIGIDO NO GUIÃO: Grava o log de sucesso na tabela de auditoria
+                
                 $log_stmt = $pdo->prepare('INSERT INTO logs (utilizador_id, acao, detalhes, criado_at) VALUES (?, ?, ?, NOW())');
                 $log_stmt->execute([$user_id, 'ALTERAR_PASSWORD_SUCESSO', 'O utilizador alterou a sua palavra-passe de acesso.']);
 
                 $sucesso_mensagem = 'Palavra-passe atualizada com sucesso!';
             } else {
-                // EXIGIDO NO GUIÃO: Grava o log de aviso/fraude caso errem a senha atual
+               
                 $log_stmt = $pdo->prepare('INSERT INTO logs (utilizador_id, acao, detalhes, criado_at) VALUES (?, ?, ?, NOW())');
                 $log_stmt->execute([$user_id, 'ALTERAR_PASSWORD_FALHA', 'Tentativa falhada de alteração de password (senha atual incorreta).']);
 
@@ -97,7 +97,7 @@ require_once '../includes/header.php';
         <form method="POST" action="configuracoes_conta.php">
           <div class="row g-3">
             
-            <!-- EXIGIDO NO GUIÃO: Campo de validação de identidade -->
+            <!--Campo de validação de identidade -->
             <div class="col-md-12">
               <label for="password_atual" class="form-label small text-muted text-uppercase fw-bold" style="font-size: 11px;">Palavra-Passe Atual <span class="text-danger">*</span></label>
               <input type="password" id="password_atual" name="password_atual" class="form-control" style="background: #0b1b3d !important; color: #fff;" placeholder="Confirme a sua chave atual" required>
@@ -115,7 +115,7 @@ require_once '../includes/header.php';
 
           </div>
 
-          <!-- Botão de Guardar (Com a cor do texto forçada a branco) -->
+          <!-- Botão de Guardar  -->
           <div class="mt-4 d-flex justify-content-end">
             <button type="submit" class="btn btn-success px-4 text-white" style="background: #00cc99 !important; border: none; font-weight: 600;">
               <i class="bi bi-key-fill me-1"></i> Atualizar Palavra-Passe
@@ -125,7 +125,7 @@ require_once '../includes/header.php';
       </div>
     </div>
 
-    <!-- COLUNA DIREITA: Informações Adicionais de Segurança (Para preencher o ecrã) -->
+    <!-- COLUNA DIREITA: Informações Adicionais de Segurança -->
     <div class="col-md-5">
       <div class="card text-white p-4 h-100" style="background: #111a2e !important; border: 1px solid rgba(255, 255, 255, 0.04) !important; border-radius: 12px;">
         <h3 class="mb-3 mt-2" style="font-size: 13px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Estado de Segurança</h3>

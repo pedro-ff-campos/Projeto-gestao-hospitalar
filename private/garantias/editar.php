@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-// 1. Variável para o header saber recuar até à raiz e carregar o teu CSS unificado
+// 1. Variável para o header saber recuar até à raiz e carregar o CSS unificado
 $prefixo = '../../';
 
 // 2. Includes obrigatórios do sistema
-// require_once '../../includes/auth.php'; // Ativas quando o login estiver operacional
+require_once '../../includes/auth.php'; 
 require_once '../../includes/db.php';     
 
 // ── Variáveis para o cabeçalho do site ───────────────────────────────────────

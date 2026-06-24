@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// 1. Variável para o header saber recuar até à raiz (estamos na pasta private/, recua 1 nível)
+// 1. Variável para o header saber recuar até à raiz 
 $prefixo = '../';
 
 // 2. Includes obrigatórios do sistema
@@ -30,7 +30,7 @@ $total_paginas = max(1, (int)ceil($total_registos / $registos_por_pagina));
 
 // ── Query 2: Obter o Histórico de Eventos com os nomes dos utilizadores ──────
 try {
-    // Usamos LEFT JOIN porque tentativas de login com emails falsos guardam o ID do utilizador como NULL
+   
     $sql = "
         SELECT l.*, u.nome AS nome_utilizador, u.email AS email_utilizador
         FROM logs l

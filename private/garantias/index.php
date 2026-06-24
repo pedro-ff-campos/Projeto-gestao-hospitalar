@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-// 1. Variável para o header saber recuar até à raiz e carregar o teu CSS
+// 1. Variável para o header saber recuar até à raiz e carregar o CSS
 $prefixo = '../../';
 
 // 2. Includes obrigatórios do sistema
@@ -140,7 +140,7 @@ function estado_garantia(DateTimeImmutable $data_fim, DateTimeImmutable $hoje, D
     return ['classe' => 'bg-success text-white', 'label' => 'Ativa', 'icone' => 'bi-shield-check'];
 }
 
-// ── Incluir o header (abre o menu lateral e o main com a classe de contexto) ──
+/
 require_once '../../includes/header.php';
 ?>
 
@@ -332,7 +332,7 @@ require_once '../../includes/header.php';
         </table>
       </div>
 
-      <!-- ── Paginação Centrada Bootstrap ── -->
+      <!-- ── Paginação Bootstrap ── -->
       <?php if ($total_paginas > 1): ?>
         <nav class="d-flex justify-content-center mt-4" aria-label="Navegação de páginas">
           <ul class="pagination pagination-sm mb-0">

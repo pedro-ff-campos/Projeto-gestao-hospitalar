@@ -18,7 +18,7 @@
 <body>
 
     <!-- NAVBAR DO FRONT OFFICE COM BOOTSTRAP -->
-    <!-- ==== NAVBAR CORRIGIDA EM CSS PURO ==== -->
+   
 <nav>
     <!-- Logótipo à esquerda -->
     <a href="index.php" class="nav-logo">

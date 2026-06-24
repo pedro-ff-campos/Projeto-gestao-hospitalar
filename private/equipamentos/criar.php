@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-// 1. Variável para o header saber recuar até à raiz e carregar o teu CSS unificado
+// 1. Variável para o header saber recuar até à raiz e carregar o CSS unificado
 $prefixo = '../../';
 
 // 2. Includes obrigatórios do sistema
-// require_once '../../includes/auth.php'; // Ativas quando o login estiver operacional
+require_once '../../includes/auth.php'; 
 require_once '../../includes/db.php';     
 
 // ── Variáveis para o cabeçalho do site ───────────────────────────────────────
@@ -71,12 +71,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// ── Incluir o header (abre a barra lateral e o layout automaticamente) ────────
 require_once '../../includes/header.php';
 ?>
 
 <!-- ════════════ CONTEÚDO HTML ════════════ -->
-<!-- Usamos a classe de contexto para reaproveitar os teus estilos escuros unificados -->
+
 <main class="pagina-equipamentos container-fluid py-4">
 
   <!-- Cabeçalho do Formulário -->

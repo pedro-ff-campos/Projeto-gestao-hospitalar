@@ -1,13 +1,11 @@
-<!-- Página para os equipamentos -->
-<!-- ========== CONTEÚDO PRINCIPAL ========== -->
-
 <?php 
+declare(strict_types=1);
 
-$prefixo = '../../'; // Define o prefixo para os includes (ajusta conforme a estrutura de pastas)
+$prefixo = '../../'; 
 
-// 1. CARREGAR O HEADER PRIVADO (Trata da Sessão, Bootstrap e liga a variável $pdo da BD)
+// 1. CARREGAR O HEADER PRIVADO 
 
-require_once '../../includes/header.php';
+
 require_once '../../includes/auth.php';
 require_once '../../includes/db.php';
 // 2. PAGINAÇÃO (Configuração básica)
@@ -46,7 +44,7 @@ if ($localizacao !== '') {
     $params[] = $localizacao;
 }
 
-// 5. CONTAR TOTAL DE RESULTADOS (Para alimentar o teu contador e paginação no HTML)
+// 5. CONTAR TOTAL DE RESULTADOS 
 $sql_total = "SELECT COUNT(*) " . $sql;
 $stmt_total = $pdo->prepare($sql_total);
 $stmt_total->execute($params);
@@ -54,20 +52,21 @@ $total_resultados = $stmt_total->fetchColumn();
 $total_paginas = ceil($total_resultados / $itens_por_pagina);
 if ($total_paginas < 1) $total_paginas = 1;
 
-// Configurar variáveis para os botões do teu HTML
+// Configurar variáveis para os botões do HTML
 $pagina_anterior  = $pagina_atual - 1;
 $pagina_seguinte  = $pagina_atual + 1;
 
-// 6. PROCURAR OS EQUIPAMENTOS DA PÁGINA ATUAL (Usa a variável $pdo herdada do teu header)
+// 6. PROCURAR OS EQUIPAMENTOS DA PÁGINA ATUAL 
 $sql_dados = "SELECT * " . $sql . " LIMIT $itens_por_pagina OFFSET $offset";
 $stmt_dados = $pdo->prepare($sql_dados);
 $stmt_dados->execute($params);
 $equipamentos = $stmt_dados->fetchAll(PDO::FETCH_ASSOC);
 
-// 7. PROCURAR LOCALIZAÇÕES PARA O TEU SELECT DINÂMICO
+// 7. PROCURAR LOCALIZAÇÕES PARA O SELECT DINÂMICO
 $stmt_loc = $pdo->query("SELECT id, servico, sala FROM localizacoes ORDER BY servico ASC, sala ASC");
 $localizacoes = $stmt_loc->fetchAll(PDO::FETCH_ASSOC);
 
+require_once '../../includes/header.php';
 ?>
 
 
@@ -78,7 +77,7 @@ $localizacoes = $stmt_loc->fetchAll(PDO::FETCH_ASSOC);
       <h1>Equipamentos</h1>
       <a href="criar.php" class="btn-novo"><i class="fa-solid fa-plus"></i> Novo Equipamento</a>
     </div>
-    <!-- GRUPO DE BOTÕES DE EXPORTAÇÃO AVANÇADA (Injetar ao lado do botão de criar) -->
+    <!-- GRUPO DE BOTÕES DE EXPORTAÇÃO AVANÇADA  -->
     <div class="btn-group btn-group-sm ms-2" role="group" aria-label="Exportar Dados">
     <a href="exportar.php?tipo=csv" class="btn btn-outline-secondary text-white border-secondary" title="Exportar para Excel (CSV)">
         <i class="fa-solid fa-file-excel me-1" style="color: #10b981;"></i> Excel
@@ -91,7 +90,7 @@ $localizacoes = $stmt_loc->fetchAll(PDO::FETCH_ASSOC);
     </a>
     </div>
 
-    <!-- ── Mensagens de feedback (preenchidas pelo PHP após operações CRUD) ── -->
+    <!-- ── Mensagens de feedback  ── -->
     <?php if (isset($_GET['sucesso'])): ?>
       <div class="alerta alerta-sucesso">
         <?php

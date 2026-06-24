@@ -302,7 +302,7 @@ include '../includes/header.php'; ?>
                                     }
                                 ?>
                                 <tr>
-                                    <!-- Injetamos o cardinal antes do código para manter o teu padrão visual -->
+                                    
                                     <td>#<?php echo htmlspecialchars($eq['codigo'], ENT_QUOTES, 'UTF-8'); ?></td>
                                     <td><strong><?php echo htmlspecialchars($eq['designacao'], ENT_QUOTES, 'UTF-8'); ?></strong></td>
                                     <td><?php echo htmlspecialchars($eq['marca'] ?? '—', ENT_QUOTES, 'UTF-8'); ?></td>

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-// 1. Variável para o header saber recuar até à raiz e carregar o teu CSS unificado
+// 1. Variável para o header saber recuar até à raiz e carregar o CSS unificado
 $prefixo = '../../';
 
 // 2. Includes obrigatórios do sistema
-// require_once '../../includes/auth.php'; // Ativas quando o login estiver operacional
+require_once '../../includes/auth.php'; 
 require_once '../../includes/db.php';     
 
 // ── Variáveis para o cabeçalho do site ───────────────────────────────────────
@@ -67,12 +67,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $valor                = $_POST['valor'] !== '' ? (float)$_POST['valor'] : null;
     $observacoes          = trim($_POST['observacoes'] ?? '');
 
-    // Validação de campos obrigatórios conforme as restrições do teu SQL
+    // Validação de campos obrigatórios 
     if ($id_equipamento === 0 || $numero_contrato === '' || $data_fim === '') {
         $erro_mensagem = 'Por favor, preencha todos os campos obrigatórios (Equipamento, Nº Contrato e Data de Fim).';
     } else {
         try {
-            // Update seguro respeitando as colunas exatas da tua tabela contratos
+           
             $sql = 'UPDATE contratos 
                     SET id_equipamento = ?, id_fornecedor = ?, numero_contrato = ?, tipo = ?, entidade_responsavel = ?, periodicidade = ?, data_inicio = ?, data_fim = ?, valor = ?, observacoes = ? 
                     WHERE id = ?';
@@ -102,14 +102,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// ── Incluir o header (abre a barra lateral e o layout automaticamente) ────────
+
 require_once '../../includes/header.php';
 ?>
 
 
 
 <!-- ════════════ CONTEÚDO HTML ════════════ -->
-<!-- Usamos a tag main com a classe para herdar o teu CSS automático -->
+
 <main class="pagina-contratos container-fluid py-4">
 
   <!-- Cabeçalho do Formulário -->

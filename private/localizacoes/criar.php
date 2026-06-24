@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-// 1. Variável para o header saber recuar até à raiz e carregar o teu CSS unificado
+// 1. Variável para o header saber recuar até à raiz e carregar o CSS unificado
 $prefixo = '../../';
 
 // 2. Includes obrigatórios do sistema
-// require_once '../../includes/auth.php'; // Ativas quando o login estiver operacional
+require_once '../../includes/auth.php'; 
 require_once '../../includes/db.php';     
 
 // ── Variáveis para o cabeçalho do site ───────────────────────────────────────
@@ -14,7 +14,7 @@ $modulo_ativo  = 'localizacoes';
 
 $erro_mensagem = '';
 
-// ── Processamento do Formulário (Quando o utilizador clica em Guardar) ────────
+// ── Processamento do Formulário  ────────
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recolha e limpeza básica dos dados estruturados conforme o teu SQL
     $edificio = trim($_POST['edificio'] ?? '');
@@ -27,12 +27,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $erro_mensagem = 'Por favor, preencha todos os campos obrigatórios.';
     } else {
         try {
-            // Inserção segura respeitando as colunas exatas da tua tabela localizacoes
+            
             $sql = 'INSERT INTO localizacoes (edificio, piso, servico, sala) VALUES (?, ?, ?, ?)';
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$edificio, $piso, $servico, $sala]);
 
-            // Se correr bem, redireciona para a listagem principal com mensagem de sucesso
+            // redireciona para a listagem principal com mensagem de sucesso
             header('Location: index.php?sucesso=criada');
             exit;
 
@@ -42,12 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// ── Incluir o header (abre a barra lateral e o layout automaticamente) ────────
 require_once '../../includes/header.php';
 ?>
 
 <!-- ════════════ CONTEÚDO HTML ════════════ -->
-<!-- Usamos a classe de contexto para reaproveitar os teus estilos escuros unificados -->
+
 <main class="pagina-localizacoes container-fluid py-4">
 
   <!-- Cabeçalho do Formulário -->
@@ -66,7 +65,7 @@ require_once '../../includes/header.php';
     </div>
   <?php endif; ?>
 
-  <!-- Card do Formulário (Usa o mesmo estilo escuro que unificámos) -->
+  <!-- Card do Formulário  -->
   <div class="card text-white p-4">
     <form method="POST" action="criar.php">
       <div class="row g-3">

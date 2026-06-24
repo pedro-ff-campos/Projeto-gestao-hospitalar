@@ -69,7 +69,7 @@ require_once '../includes/header.php';
 ?>
 
 <!-- ════════════ CONTEÚDO HTML ════════════ -->
-<!-- Criamos uma classe de contexto nova para isolar os estilos se necessário -->
+
 <div class="pagina-relatorios container-fluid py-4">
 
   <!-- Cabeçalho da página -->

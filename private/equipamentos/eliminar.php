@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-// 1. Inicia o controlo de sessões (podes ativar o auth quando o login estiver pronto)
+// 1. Inicia o controlo de sessões 
 session_start();
-// require_once '../../includes/auth.php'; 
+require_once '../../includes/auth.php'; 
 
 // 2. Inclui a ligação à base de dados
 require_once '../../includes/db.php';     
@@ -19,7 +19,7 @@ if ($id === 0) {
 
 // ── 2. Executar a Eliminação Segura no MySQL ─────────────────────────────────
 try {
-    // Usamos Prepared Statements para evitar ataques à base de dados
+    // Prepared Statements para evitar ataques à base de dados
     $sql = 'DELETE FROM equipamentos WHERE id = ?';
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$id]);

@@ -11,7 +11,7 @@ $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_EMULATE_PREPARES   => false,
-    // ADICIONA ESTA LINHA: Desiste de ligar após 4 segundos se o servidor não responder
+    //  Desiste de ligar após 4 segundos se o servidor não responder
     PDO::ATTR_TIMEOUT            => 4, 
 ];
 

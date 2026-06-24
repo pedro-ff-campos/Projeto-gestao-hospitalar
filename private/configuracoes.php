@@ -15,14 +15,14 @@ $modulo_ativo  = 'configuracoes';
 $sucesso_mensagem = '';
 $erro_mensagem = '';
 
-// ── 1. Processamento do Formulário (Quando o utilizador clica em Atualizar) ──
+// ── 1. Processamento do Formulário  ──
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         // Instrução SQL segura para atualizar cada campo usando a sua chave única
         $sql = "UPDATE conteudos_publicos SET valor = ? WHERE chave = ?";
         $stmt = $pdo->prepare($sql);
 
-        // Fazemos o update para cada um dos campos do site público
+        
         $stmt->execute([trim($_POST['titulo_hero'] ?? ''), 'titulo_hero']);
         $stmt->execute([trim($_POST['texto_hero'] ?? ''), 'texto_hero']);
         $stmt->execute([trim($_POST['titulo_sobre'] ?? ''), 'titulo_sobre']);
@@ -49,12 +49,12 @@ try {
     // Mantém valores vazios de segurança caso a tabela falhe
 }
 
-// ── Incluir o header padrão do site ──────────────────────────────────────────
+
 require_once '../includes/header.php';
 ?>
 
 <!-- ════════════ CONTEÚDO HTML ════════════ -->
-<!-- Usamos a tag main com a classe como tens nos teus estilos CSS para herdar as cores -->
+
 <main class="pagina-equipamentos container-fluid py-4">
 
   <!-- Cabeçalho da página -->
@@ -78,7 +78,7 @@ require_once '../includes/header.php';
     </div>
   <?php endif; ?>
 
-  <!-- Card do Formulário (Herda o teu estilo escuro de forma automática) -->
+  <!-- Card do Formulário  -->
   <div class="card text-white p-4" style="background: #111a2e !important; border: 1px solid rgba(255, 255, 255, 0.04) !important; border-radius: 12px;">
     <form method="POST" action="configuracoes.php">
       

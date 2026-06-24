@@ -29,7 +29,7 @@ try {
 $equipamentos = [];
 $pesquisa_feita = false;
 
-// Só faz a busca na base de dados se o utilizador tiver submetido algum filtro
+
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && (!empty($termo) || !empty($estado) || !empty($criticidade) || $id_servico > 0)) {
     $pesquisa_feita = true;
     
@@ -73,12 +73,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && (!empty($termo) || !empty($estado) |
     }
 }
 
-// ── Incluir o header padrão do site ──────────────────────────────────────────
+
 require_once '../includes/header.php';
 ?>
 
 <!-- ════════════ CONTEÚDO HTML ════════════ -->
-<!-- Usamos uma div com a classe para herdar o Dark Mode automático do teu CSS -->
+
 <div class="pagina-equipamentos container-fluid py-4">
 
   <!-- Cabeçalho da página -->

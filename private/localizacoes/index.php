@@ -89,7 +89,7 @@ $labels_tipo = [
     'sala'     => 'Sala',
 ];
 
-// ── Incluir header ───────────────────────────────────────────────────────────
+
 require_once '../../includes/header.php';
 ?>
 
@@ -129,7 +129,7 @@ require_once '../../includes/header.php';
     </div>
   <?php endif; ?>
 
-  <!-- ── Filtros (Bloco limpo com classes Bootstrap) ── -->
+  <!-- ── Filtros  ── -->
   <section class="card text-white p-4 mb-4">
     <h2 class="mb-3">Pesquisa e Filtros</h2>
 
@@ -192,7 +192,7 @@ require_once '../../includes/header.php';
       </div>
     <?php else: ?>
 
-      <!-- Tabela com scroll responsivo nativo do Bootstrap -->
+      <!-- Tabela  -->
       <div class="table-responsive">
         <table class="table table-dark table-hover align-middle mb-0">
           <thead>
@@ -249,7 +249,7 @@ require_once '../../includes/header.php';
         </table>
       </div>
 
-      <!-- ── Paginação Bootstrap ── -->
+      <!-- ── Paginação  ── -->
       <?php if ($total_paginas > 1): ?>
         <nav class="d-flex justify-content-center mt-4" aria-label="Navegação de páginas">
           <ul class="pagination pagination-sm mb-0">

@@ -13,7 +13,7 @@ require_once '../../includes/db.php';
 $titulo_pagina = 'Documentação';
 $modulo_ativo  = 'documentacao';
 
-// ── Tipos de documento válidos (Constante limpa que bate certo com o HTML) ─────
+// ── Tipos de documento válidos  ─────
 const TIPOS_DOCUMENTO = [
     'manual'      => 'Manual Técnico',
     'certificado' => 'Certificado / Calibração',
@@ -21,7 +21,7 @@ const TIPOS_DOCUMENTO = [
     'outro'       => 'Outro Documento',
 ];
 
-// ── Parâmetros de pesquisa e filtro (vindos do GET sem htmlspecialchars) ──────
+// ── Parâmetros de pesquisa e filtro  ──────
 $pesquisa       = trim($_GET['pesquisa'] ?? '');
 $tipo           = trim($_GET['tipo'] ?? '');
 $equipamento_id = max(0, (int)($_GET['equipamento_id'] ?? 0));
@@ -36,7 +36,7 @@ $registos_por_pagina = 10;
 $pagina_atual        = max(1, (int)($_GET['pagina'] ?? 1));
 $offset              = ($pagina_atual - 1) * $registos_por_pagina;
 
-// ── Construção dinâmica das condições WHERE (Mais simples para explicar) ─────
+// ── Construção dinâmica das condições WHERE  ─────
 $sql_where = " WHERE 1=1";
 $params = [];
 
@@ -55,7 +55,7 @@ if ($equipamento_id > 0) {
     $params[':equipamento_id'] = $equipamento_id;
 }
 
-// ── Query 1: Contar total de resultados (Para a paginação funcionar) ──────────
+// ── Query 1: Contar total de resultados  ──────────
 try {
     $sql_count = "
         SELECT COUNT(*) 
@@ -117,13 +117,12 @@ $qs_filtros = http_build_query(array_filter([
     'equipamento_id' => $equipamento_id ?: '',
 ]));
 
-// ── Incluir o header (abre o menu lateral e o main com o prefixo correto) ─────
 require_once '../../includes/header.php';
 ?>
 
 
 <!-- ════════════ CONTEÚDO ════════════ -->
-<!-- Classe de contexto e espaçamentos do Bootstrap -->
+
 <main class="pagina-documentacao container-fluid py-4">
 
   <!-- ── Cabeçalho da página ── -->
@@ -158,7 +157,7 @@ require_once '../../includes/header.php';
     </div>
   <?php endif; ?>
 
-  <!-- ── Filtros (Estrutura em Grelha do Bootstrap) ── -->
+  <!-- ── Filtros  ── -->
   <section class="card text-white p-4 mb-4">
     <h2 class="mb-3">Pesquisa e Filtros</h2>
 
@@ -227,7 +226,7 @@ require_once '../../includes/header.php';
     </h2>
 
     <?php if (empty($documentos)): ?>
-      <!-- Estado vazio bem centrado -->
+      <!-- Estado vazio  -->
       <div class="text-center py-5 text-muted">
         <i class="bi bi-file-earmark-text h1"></i>
         <p class="mt-2">Nenhum documento encontrado.</p>
@@ -239,7 +238,7 @@ require_once '../../includes/header.php';
       </div>
     <?php else: ?>
 
-      <!-- Tabela com scroll horizontal automático para ecrãs pequenos -->
+      <!-- Tabela com scroll horizontal automático  -->
       <div class="table-responsive">
         <table class="table table-dark table-hover align-middle mb-0">
           <thead>
@@ -356,5 +355,5 @@ require_once '../../includes/header.php';
 
   </section>
 
-</main> <!-- Fecho do main da página-documentacao -->
+</main> 
 <?php include '../../includes/footer.php'; ?>

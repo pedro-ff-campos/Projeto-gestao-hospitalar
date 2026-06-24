@@ -12,7 +12,6 @@ if ($user_id === 0) {
 }
 
 // Quando o utilizador altera o Nome ou o E-mail
-// ... (teu código inicial de sessão e includes) ...
 
 $sucesso_mensagem = '';
 $erro_mensagem = '';

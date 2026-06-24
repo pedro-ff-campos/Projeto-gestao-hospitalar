@@ -46,7 +46,7 @@ $offset              = ($pagina_atual - 1) * $registos_por_pagina;
 $hoje       = new DateTimeImmutable('today');
 $em_30_dias = $hoje->modify('+30 days');
 
-// ── Construção direta e simples das condições WHERE (Fácil de explicar) ──────
+// ── Construção direta e simples das condições WHERE  ──────
 $sql_where = " WHERE 1=1";
 $params = [];
 
@@ -148,24 +148,23 @@ $qs_filtros = http_build_query(array_filter([
 function estado_contracto(DateTimeImmutable $data_fim, DateTimeImmutable $hoje, DateTimeImmutable $em_30_dias): array
 {
     if ($data_fim < $hoje) {
-        // Expirado -> Cor vermelha do Bootstrap
+        // Expirado 
         return ['classe' => 'bg-danger text-white', 'label' => 'Expirado', 'icone' => 'bi-file-earmark-x'];
     }
     if ($data_fim <= $em_30_dias) {
-        // A renovar -> Cor amarela do Bootstrap
+        // A renovar 
         return ['classe' => 'bg-warning text-dark', 'label' => 'A renovar', 'icone' => 'bi-arrow-clockwise'];
     }
-    // Ativo -> Cor verde do Bootstrap
+    // Ativo 
     return ['classe' => 'bg-success text-white', 'label' => 'Ativo', 'icone' => 'bi-file-earmark-check'];
 }
 
-// ── Incluir o header (abre o menu lateral e o main com a classe de contexto) ──
 require_once '../../includes/header.php';
 ?>
 
 
 <!-- ════════════ CONTEÚDO ════════════ -->
-<!-- Classe de contexto e espaçamentos do Bootstrap -->
+
 <main class="pagina-contratos container-fluid py-4">
 
   <!-- ── Cabeçalho da página ── -->
@@ -271,7 +270,7 @@ require_once '../../includes/header.php';
       </div>
     </form>
   </section>
-  <!-- ── Listagem (Cartão integrado no tema escuro) ── -->
+  <!-- ── Listagem  ── -->
   <section class="card text-white p-4">
 
     <h2 class="mb-3">
@@ -282,7 +281,7 @@ require_once '../../includes/header.php';
     </h2>
 
     <?php if (empty($contratos)): ?>
-      <!-- Estado vazio bem desenhado -->
+      
       <div class="text-center py-5 text-muted">
         <i class="bi bi-file-earmark-ruled h1"></i>
         <p class="mt-2">Nenhum contrato encontrado.</p>
@@ -407,5 +406,5 @@ require_once '../../includes/header.php';
 
   </section>
 
-</main> <!-- Fecho seguro da página-contratos -->
+</main> 
 <?php include '../../includes/footer.php'; ?>

@@ -21,7 +21,7 @@ $registos_por_pagina = 10;
 $pagina_atual = max(1, (int) ($_GET['pagina'] ?? 1));
 $offset       = ($pagina_atual - 1) * $registos_por_pagina;
 
-// ── Query 1: Contar total de resultados (Necessário para a paginação) ────────
+// ── Query 1: Contar total de resultados  ────────
 try {
     $sql_count = 'SELECT COUNT(*) FROM fornecedores WHERE 1=1';
     $params_count = [];
@@ -46,7 +46,7 @@ try {
 
 $total_paginas = max(1, (int) ceil($total_registos / $registos_por_pagina));
 
-// ── Query 2: Obter os Fornecedores (Regra: Consulta SQL simples) ─────────────
+// ── Query 2: Obter os Fornecedores ─────────────
 try {
     $sql = 'SELECT id, nome, contacto, nif, tipo FROM fornecedores WHERE 1=1';
     $params = [];
@@ -79,7 +79,6 @@ $labels_tipo = [
     'software'     => 'Sistemas / TI',
 ];
 
-// ── Incluir header ───────────────────────────────────────────────────────────
 require_once '../../includes/header.php';
 ?>
 

@@ -33,7 +33,7 @@ try {
     $log_stmt = $pdo->prepare('INSERT INTO logs (utilizador_id, acao, detalhes, criado_at) VALUES (?, ?, ?, NOW())');
     $log_stmt->execute([$user_id, 'ELIMINAR_CONTRATO', "O utilizador removeu o registo de contrato de manutenção ID: $id."]);
 
-    // Regressa à listagem principal com o alerta verde de sucesso
+    // Regressa à listagem principal 
     header('Location: index.php?sucesso=eliminado');
     exit;
 

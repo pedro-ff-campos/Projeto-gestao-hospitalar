@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-// 1. Variável para o header saber recuar até à raiz e carregar o teu CSS unificado
+// 1. Variável para o header saber recuar até à raiz e carregar o CSS unificado
 $prefixo = '../../';
 
 // 2. Includes obrigatórios do sistema
-// require_once '../../includes/auth.php'; // Ativas quando o login estiver operacional
+require_once '../../includes/auth.php';
 require_once '../../includes/db.php';     
 
 // ── Variáveis para o cabeçalho do site ───────────────────────────────────────
@@ -110,7 +110,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// ── Incluir o header (abre a sidebar e o layout automaticamente) ──────────────
 require_once '../../includes/header.php';
 ?>
 
@@ -133,7 +132,7 @@ require_once '../../includes/header.php';
     </div>
   <?php endif; ?>
 
-  <!-- Card do Formulário (Usa o teu estilo escuro herdado automaticamente) -->
+  <!-- Card do Formulário  -->
   <div class="card text-white p-4">
     <form method="POST" action="editar.php?id=<?php echo $id; ?>" enctype="multipart/form-data">
       <div class="row g-3">

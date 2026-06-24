@@ -4,7 +4,7 @@ declare(strict_types=1);
 require_once '../../includes/db.php';
 session_start();
 
-// Proteção básica: Se não estiver logado, expulsa (descomenta quando o auth estiver a 100%)
+// Proteção básica: Se não estiver logado, expulsa 
 if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
     header('Location: ../../login.php');
     exit;
@@ -12,7 +12,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
 // ── 1. QUERY: Procurar todos os equipamentos reais com a sua localização ────
 try {
-    // Usamos INNER JOIN para cruzar o ID da sala com o nome real do serviço
+    // INNER JOIN para cruzar o ID da sala com o nome real do serviço
     $sql = "SELECT e.codigo, e.designacao, e.marca, e.modelo, e.numero_serie, e.estado, e.criticidade, l.servico 
             FROM equipamentos e 
             INNER JOIN localizacoes l ON l.id = e.id_localizacao 
@@ -72,8 +72,7 @@ if ($formato === 'json') {
 
 // ════════════ CANAL C: RELATÓRIO IMPRESSO (PDF NATIVO) ════════════
 if ($formato === 'pdf') {
-    // Para evitar bibliotecas pesadas que quebram nos servidores gratuitos (como 000webhost ou InfinityFree),
-    // criamos uma página HTML ultra-limpa e usamos o motor de impressão nativo do navegador para salvar em PDF.
+   
     ?>
     <!DOCTYPE html>
     <html lang="pt">
@@ -126,7 +125,7 @@ if ($formato === 'pdf') {
             </tbody>
         </table>
 
-        <!-- O truque que força o navegador a abrir a janela de "Guardar como PDF" automaticamente -->
+        <!-- força o navegador a abrir a janela de "Guardar como PDF" automaticamente -->
         <script>
             window.onload = function() {
                 window.print();
