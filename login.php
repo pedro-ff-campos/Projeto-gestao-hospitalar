@@ -27,12 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['logado'] = true;
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_email'] = $user['email'];
+        $_SESSION['user_nome'] = $user['nome'];
+        $_SESSION['user_hospital'] = $user['hospital'] ?? 'Hospital Geral';
 
         try {
             $log_stmt = $pdo->prepare('INSERT INTO logs (utilizador_id, acao, detalhes, criado_at) VALUES (?, ?, ?, NOW())');
             $log_stmt->execute([$user['id'], 'LOGIN_SUCESSO', 'O Utilizador iniciou sessão com sucesso.']);
         } catch (PDOException $e) {
-            // Silencia o erro se a tabela de logs falhar
+            
         }
 
         // Redireciona para o painel dentro da pasta private/
@@ -40,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
         
     } else {
-        // Se a validação falhou, descobrimos se o e-mail existe ou não para refinar o log
+        
         $erro = "E-mail ou palavra-passe incorretos!";
         
         try {
@@ -54,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $log_stmt->execute([null, 'LOGIN_AVISO', 'Tentativa de login com e-mail inexistente: ' . $email]);
             }
         } catch (PDOException $e) {
-            // Silencia o erro se a tabela de logs falhar
+            
         }
     }
 }
