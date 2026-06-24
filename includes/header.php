@@ -89,9 +89,16 @@
         </button>
         
         <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow" aria-labelledby="dropdownUser">
-          <li><a class="dropdown-item" href="<?php echo $prefixo; ?>perfil.php"><i class="bi bi-person me-2"></i> O meu Perfil</a></li>
-          <li><a class="dropdown-item" href="<?php echo $prefixo; ?>configuracoes_conta.php"><i class="bi bi-gear me-2"></i> Configurações</a></li>
-          
+          <?php
+// Deteta automaticamente se o utilizador já está dentro da pasta private
+          $na_pasta_private = (strpos($_SERVER['SCRIPT_NAME'], '/private/') !== false);
+          $caminho_perfil = $na_pasta_private ? 'perfil.php' : $prefixo . 'private/perfil.php';
+          $caminho_config = $na_pasta_private ? 'configuracoes_conta.php' : $prefixo . 'private/configuracoes_conta.php';
+          ?>
+
+          <li><a class="dropdown-item" href="<?php echo $caminho_perfil; ?>"><i class="bi bi-person me-2"></i> O meu Perfil</a></li>
+          <li><a class="dropdown-item" href="<?php echo $caminho_config; ?>"><i class="bi bi-gear me-2"></i> Configurações</a></li>
+
           <li><hr class="dropdown-divider border-secondary"></li>
           
           <!-- O logout recua até à raiz correta e limpa a sessão com segurança -->

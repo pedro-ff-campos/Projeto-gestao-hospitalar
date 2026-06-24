@@ -64,7 +64,7 @@ require_once '../includes/header.php';
 ?>
 
 
-<!-- ════════════ CONTEÚDO HTML ATUALIZADO ════════════ -->
+<!-- ════════════ CONTEÚDO HTML  ════════════ -->
 <main class="pagina-equipamentos container-fluid py-4">
 
   <!-- Cabeçalho da página -->
